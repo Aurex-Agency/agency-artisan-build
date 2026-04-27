@@ -2,87 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Wood Insurance Agency Design System
+ * Brand: Navy / Forest Green / Gold
+ * Built for accessibility (45+ readers): 18px body, 1.7 line-height, high contrast.
+ * All colors MUST be HSL.
+ */
 
 @layer base {
   :root {
+    /* Brand palette — derived from #1A3A8C, #2E7D32, #D4A017 */
+    --primary: 222 68% 33%;          /* #1A3A8C navy */
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 224 75% 20%;     /* #0D2259 deep navy */
+
+    --secondary: 122 46% 34%;        /* #2E7D32 forest green */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 44 79% 47%;            /* #D4A017 gold */
+    --accent-foreground: 218 27% 17%;
+    --accent-dark: 43 86% 38%;       /* #B8860B */
+
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 218 27% 17%;       /* #1F2937 dark */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 218 27% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 218 27% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --muted: 210 20% 98%;            /* #F9FAFB light */
+    --muted-foreground: 220 9% 46%;  /* #6B7280 */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --dark: 218 27% 17%;             /* #1F2937 */
+    --text: 220 13% 27%;             /* #374151 body text */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --border: 220 13% 91%;           /* #E5E7EB */
+    --input: 220 13% 91%;
+    --ring: 222 68% 33%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --radius: 0.625rem;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Effects */
+    --shadow-card: 0 1px 3px 0 hsl(218 27% 17% / 0.06), 0 4px 16px -4px hsl(218 27% 17% / 0.08);
+    --shadow-elevated: 0 12px 32px -12px hsl(222 68% 33% / 0.18);
+    --shadow-cta: 0 6px 20px -6px hsl(44 79% 47% / 0.45);
+    --transition-base: 200ms ease;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Site is light-only by design; keep tokens for shadcn compatibility. */
+    --background: 218 27% 10%;
+    --foreground: 0 0% 98%;
+    --card: 218 27% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 218 27% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 222 68% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 122 46% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 218 27% 17%;
+    --muted-foreground: 220 9% 70%;
+    --accent: 44 79% 55%;
+    --accent-foreground: 218 27% 10%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 218 27% 22%;
+    --input: 218 27% 22%;
+    --ring: 222 68% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +101,107 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: hsl(var(--text));
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: hsl(var(--primary));
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: hsl(var(--accent) / 0.35);
+    color: hsl(var(--dark));
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-block text-[13px] font-semibold uppercase tracking-[0.18em];
+    color: hsl(var(--secondary));
+  }
+  .eyebrow-gold { color: hsl(var(--accent)); }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12;
+  }
+
+  .btn-base {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    min-height: 52px;
+    padding: 0 1.75rem;
+    font-size: 17px;
+  }
+  .btn-gold {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--dark));
+    box-shadow: var(--shadow-cta);
+  }
+  .btn-gold:hover {
+    background-color: hsl(var(--accent-dark));
+    transform: translateY(-1px);
+  }
+  .btn-navy {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+  .btn-navy:hover { background-color: hsl(var(--primary-dark)); }
+  .btn-outline-navy {
+    background-color: transparent;
+    color: hsl(var(--primary));
+    border: 2px solid hsl(var(--primary));
+  }
+  .btn-outline-navy:hover {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+  .btn-outline-white {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  .btn-outline-white:hover {
+    background-color: white;
+    color: hsl(var(--primary));
+  }
+  .btn-outline-dark {
+    background-color: transparent;
+    color: hsl(var(--dark));
+    border: 2px solid hsl(var(--dark));
+  }
+  .btn-outline-dark:hover {
+    background-color: hsl(var(--dark));
+    color: white;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-hero-rise { animation: hero-rise 0.5s ease-out both; }
+
+  @keyframes soft-pulse {
+    0%, 100% { box-shadow: 0 -4px 24px -4px hsl(44 79% 47% / 0.4); }
+    50% { box-shadow: 0 -6px 28px -2px hsl(44 79% 47% / 0.7); }
+  }
+  .animate-soft-pulse { animation: soft-pulse 2s ease-in-out infinite; }
   }
 }
