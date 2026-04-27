@@ -203,5 +203,4 @@
     50% { box-shadow: 0 -6px 28px -2px hsl(44 79% 47% / 0.7); }
   }
   .animate-soft-pulse { animation: soft-pulse 2s ease-in-out infinite; }
-  }
 }
