@@ -18,15 +18,15 @@ import handshake from "@/assets/photos/office-desk.jpg";
 const CARRIERS = ["Humana", "Aetna", "UnitedHealthcare", "Cigna", "Mutual of Omaha", "Anthem", "Wellcare", "Blue Cross"];
 
 const COVERAGE = [
-  { icon: HeartPulse, label: "Medicare", title: "Turning 65 soon?", body: "We sit down with you, review your doctors and medications, and compare top-rated carriers — completely free.", href: "/medicare", photo: medicarePhoto, alt: "Older couple reviewing Medicare paperwork on a Mississippi front porch" },
-  { icon: ShieldCheck, label: "Health", title: "Coverage that fits.", body: "ACA, individual, family, short-term — we shop multiple carriers to find a plan you can actually afford.", href: "/health-insurance", photo: healthPhoto, alt: "Multigenerational Southern family making biscuits together in a sunny kitchen" },
-  { icon: Leaf, label: "Life", title: "Look after your people.", body: "Term, whole life, and final expense policies built around your family — without the hard sell.", href: "/life-insurance", photo: lifePhoto, alt: "Grandparent and grandchild planting a tomato seedling together in a garden" },
+  { icon: HeartPulse, label: "Medicare", title: "Turning 65 soon?", body: "We sit down with you, review your doctors and medications, and compare top-rated carriers. Completely free.", href: "/medicare", photo: medicarePhoto, alt: "Older couple reviewing Medicare paperwork on a Mississippi front porch" },
+  { icon: ShieldCheck, label: "Health", title: "Coverage that fits.", body: "ACA, individual, family, short-term. We shop multiple carriers to find a plan you can actually afford.", href: "/health-insurance", photo: healthPhoto, alt: "Multigenerational Southern family making biscuits together in a sunny kitchen" },
+  { icon: Leaf, label: "Life", title: "Look after your people.", body: "Term, whole life, and final expense policies built around your family, without the hard sell.", href: "/life-insurance", photo: lifePhoto, alt: "Grandparent and grandchild planting a tomato seedling together in a garden" },
 ];
 
 const REVIEWS = [
   { quote: "We had a delightful experience at Wood Insurance Agency. Not only was Cindy nice and friendly, she was able to explain details we could understand about our policies.", name: "Linda Downing", place: "Google Review", rotate: -2.5 },
-  { quote: "Mrs. Cindy is so helpful. She goes out of her way to help you and genuinely cares for people. This insurance is such a blessing — medicine is free or near nothing. So excited.", name: "Sharon Caves", place: "Google Review", rotate: 1.5 },
-  { quote: "Excellent service! Cindy always goes the extra mile for her customers — very knowledgeable. Brings a personal quality to her service. Highly recommend.", name: "Sherry Hylender", place: "Google Review", rotate: -1.5 },
+  { quote: "Mrs. Cindy is so helpful. She goes out of her way to help you and genuinely cares for people. This insurance is such a blessing. Medicine is free or near nothing. So excited.", name: "Sharon Caves", place: "Google Review", rotate: 1.5 },
+  { quote: "Excellent service! Cindy always goes the extra mile for her customers. Very knowledgeable. Brings a personal quality to her service. Highly recommend.", name: "Sherry Hylender", place: "Google Review", rotate: -1.5 },
 ];
 
 const Index = () => {
@@ -51,7 +51,7 @@ const Index = () => {
               from neighbors you know.
             </h1>
             <p className="animate-hero-rise mt-5 sm:mt-7 text-[17px] sm:text-[19px] lg:text-[20px] text-ink/80 max-w-xl leading-[1.55] sm:leading-[1.6]" style={{ animationDelay: "60ms" }}>
-              Honest, sit-down guidance for your <span className="font-display italic">Medicare</span>, <span className="font-display italic">Health</span>, and <span className="font-display italic">Life</span> insurance — right here in Magee, Mississippi.
+              Honest, sit-down guidance for your <span className="font-display italic">Medicare</span>, <span className="font-display italic">Health</span>, and <span className="font-display italic">Life</span> insurance, right here in Magee, Mississippi.
             </p>
 
             <div className="animate-hero-rise mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4" style={{ animationDelay: "120ms" }}>
@@ -173,7 +173,7 @@ const Index = () => {
               <em className="italic text-accent">Small town</em> handshakes.
             </h2>
             <p className="mt-5 sm:mt-7 text-[16px] sm:text-[18px] lg:text-[19px] text-white/85 leading-[1.6] sm:leading-[1.7] max-w-2xl">
-              Unlike out-of-state call centers, we sit right here on Highway 149. We answer our own phones. We know Simpson General and the local networks. We sit down face to face and review your policies every year — because that's what neighbors do.
+              Unlike out-of-state call centers, we sit right here on Highway 149. We answer our own phones. We know Simpson General and the local networks. We sit down face to face and review your policies every year, because that's what neighbors do.
             </p>
 
             {/* Mobile: clean inline stats. Desktop: full StatTile grid */}
@@ -197,7 +197,7 @@ const Index = () => {
 
             <div className="mt-8 sm:mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
               <Link to="/about" className="btn-base btn-gold">About our agency</Link>
-              <span className="font-script text-accent text-[24px] sm:text-[28px] leading-none">— from your neighbors in Magee</span>
+              <span className="font-script text-accent text-[24px] sm:text-[28px] leading-none">from your neighbors in Magee</span>
             </div>
           </div>
           <div className="relative mt-2 lg:mt-0">
@@ -261,7 +261,7 @@ const Index = () => {
               <a href="tel:6013972982" className="mt-7 inline-flex items-center gap-3 font-display text-accent text-[28px] sm:text-[32px] font-bold hover:text-accent-dark transition-colors">
                 <Phone className="w-7 h-7" /> (601) 397-2982
               </a>
-              <p className="mt-5 text-white/70">Mon – Fri · 9:00 AM – 5:00 PM</p>
+              <p className="mt-5 text-white/70">Mon to Fri · 9:00 AM to 5:00 PM</p>
               <img src={handshake} alt="" loading="lazy" className="mt-10 w-full max-w-md aspect-[3/2] object-cover rounded-sm shadow-polaroid border-[6px] border-white sm:[transform:rotate(-2deg)]" />
             </div>
           </div>
