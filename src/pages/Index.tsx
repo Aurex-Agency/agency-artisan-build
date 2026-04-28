@@ -24,9 +24,9 @@ const COVERAGE = [
 ];
 
 const REVIEWS = [
-  { quote: "The Wood Insurance team made the whole Medicare process so easy. They walked me through everything step by step. I ended up saving over $80 a month.", name: "Linda T.", place: "Magee, MS", rotate: -2.5 },
-  { quote: "Every time I call, a real person answers. They found me a plan that kept my doctors and cut my premium by almost $200 a month. I tell everyone.", name: "James R.", place: "Mendenhall, MS", rotate: 1.5 },
-  { quote: "When my husband passed, the team helped me figure out my life insurance and Medicare options all at once. Patient. Kind. A blessing to this community.", name: "Patricia W.", place: "Simpson County, MS", rotate: -1.5 },
+  { quote: "We had a delightful experience at Wood Insurance Agency. Not only was Cindy nice and friendly, she was able to explain details we could understand about our policies.", name: "Linda Downing", place: "Google Review", rotate: -2.5 },
+  { quote: "Mrs. Cindy is so helpful. She goes out of her way to help you and genuinely cares for people. This insurance is such a blessing — medicine is free or near nothing. So excited.", name: "Sharon Caves", place: "Google Review", rotate: 1.5 },
+  { quote: "Excellent service! Cindy always goes the extra mile for her customers — very knowledgeable. Brings a personal quality to her service. Highly recommend.", name: "Sherry Hylender", place: "Google Review", rotate: -1.5 },
 ];
 
 const Index = () => {
