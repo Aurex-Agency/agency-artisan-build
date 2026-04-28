@@ -44,24 +44,24 @@ const Index = () => {
       {/* HERO */}
       <section className="relative bg-cream overflow-hidden">
         <TopoBackground className="text-primary" opacity={0.06} />
-        <div className="container-wide grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center pt-14 pb-20 lg:pt-20 lg:pb-28 relative">
+        <div className="container-wide grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-16 items-center pt-10 pb-14 lg:pt-20 lg:pb-28 relative">
           <div>
             <span className="eyebrow">Independent · Local · Free to You</span>
-            <h1 className="display animate-hero-rise mt-5 text-[44px] sm:text-[60px] lg:text-[78px] xl:text-[88px] leading-[0.96] tracking-[-0.035em] text-primary text-balance">
+            <h1 className="display animate-hero-rise mt-4 sm:mt-5 text-[38px] sm:text-[60px] lg:text-[78px] xl:text-[88px] leading-[1] sm:leading-[0.96] tracking-[-0.035em] text-primary text-balance">
               Roots run <em className="italic text-secondary-deep">deep</em>
               <br />
               in Simpson County.
             </h1>
-            <p className="animate-hero-rise mt-7 text-[19px] lg:text-[21px] text-ink/80 max-w-xl leading-[1.6]" style={{ animationDelay: "60ms" }}>
+            <p className="animate-hero-rise mt-5 sm:mt-7 text-[17px] sm:text-[19px] lg:text-[21px] text-ink/80 max-w-xl leading-[1.55] sm:leading-[1.6]" style={{ animationDelay: "60ms" }}>
               Honest, sit-down guidance for your <span className="font-display italic">Medicare</span>, <span className="font-display italic">Health</span>, and <span className="font-display italic">Life</span> insurance from your neighbors in Magee.
             </p>
-            <div className="animate-hero-rise mt-9 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "120ms" }}>
+            <div className="animate-hero-rise mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4" style={{ animationDelay: "120ms" }}>
               <a href="tel:6013972982" className="btn-base btn-gold">
                 <Phone className="w-5 h-5" /> (601) 397-2982
               </a>
               <a href="#coverage" className="btn-base btn-outline-navy">Explore coverage</a>
             </div>
-            <div className="animate-hero-rise mt-8 flex items-center gap-4" style={{ animationDelay: "180ms" }}>
+            <div className="animate-hero-rise mt-7 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4" style={{ animationDelay: "180ms" }}>
               <div className="flex -space-x-2">
                 {["LT", "JR", "PW"].map((i) => (
                   <span key={i} className="w-9 h-9 rounded-full bg-primary text-white text-[12px] font-semibold flex items-center justify-center border-2 border-cream">{i}</span>
@@ -69,24 +69,24 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="flex" aria-label="5 of 5 stars">{[0,1,2,3,4].map((i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}</div>
-                <span className="text-[14px] text-ink/70">Rated 5.0 by Simpson County families</span>
+                <span className="text-[13px] sm:text-[14px] text-ink/70">Rated 5.0 by Simpson County families</span>
               </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="relative aspect-[4/5] max-w-[460px] mx-auto">
-              <BrandTree variant="full" glow className="absolute inset-0 w-full h-full" />
+            <div className="relative aspect-[4/5] w-[78%] sm:w-full max-w-[340px] sm:max-w-[460px] mx-auto">
+              <BrandTree variant="full" glow className="absolute inset-0 w-full h-full opacity-70 sm:opacity-100" />
               <img
                 src={portrait}
                 alt="A Wood Insurance Agency agent at her desk in the Magee, MS office"
-                className="absolute bottom-0 right-0 w-[62%] aspect-[4/5] object-cover rounded-sm shadow-polaroid border-[6px] border-white"
+                className="absolute bottom-0 right-0 left-0 sm:left-auto mx-auto sm:mx-0 w-[88%] sm:w-[62%] aspect-[4/5] object-cover rounded-sm shadow-polaroid border-[6px] border-white"
                 style={{ transform: "rotate(3deg)" }}
               />
-              <div className="absolute -top-4 -left-2">
+              <div className="absolute -top-2 left-0 sm:-top-4 sm:-left-2">
                 <LeafBadge rotate={-12}>Free to You</LeafBadge>
               </div>
-              <div className="absolute top-1/3 -right-2">
+              <div className="hidden sm:block absolute top-1/3 -right-2">
                 <LeafBadge rotate={8} variant="green">Local since day one</LeafBadge>
               </div>
             </div>
@@ -111,9 +111,9 @@ const Index = () => {
             underlinedWord="One"
             intro="Each branch of coverage handled by people who actually know your name."
           />
-          <div className="mt-16 grid lg:grid-cols-3 gap-7">
+          <div className="mt-12 lg:mt-16 grid lg:grid-cols-3 gap-7">
             {COVERAGE.map(({ icon: Icon, label, title, body, href, photo, alt }, i) => (
-              <article key={label} className="group relative bg-cream rounded-2xl overflow-hidden flex flex-col shadow-card hover:shadow-elevated transition-shadow" style={{ transform: `translateY(${i % 2 ? "0" : "12px"})` }}>
+              <article key={label} className={`group relative bg-cream rounded-2xl overflow-hidden flex flex-col shadow-card hover:shadow-elevated transition-shadow ${i % 2 ? "" : "lg:translate-y-3"}`}>
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={photo} alt={alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-cream text-primary text-[12px] font-semibold uppercase tracking-[0.18em] shadow-sm">
@@ -149,12 +149,12 @@ const Index = () => {
             <p className="mt-7 text-[18px] lg:text-[19px] text-white/85 leading-[1.7] max-w-2xl">
               Unlike out-of-state call centers, we sit right here on Highway 149. We answer our own phones. We know Simpson General and the local networks. We sit down face to face and review your policies every year — because that's what neighbors do.
             </p>
-            <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
+            <div className="mt-10 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl">
               <StatTile value="100%" label="Free to you" tone="cream" />
               <StatTile value="20+" label="Carriers shopped" tone="cream" />
               <StatTile value="1:1" label="Face-to-face" tone="cream" />
             </div>
-            <div className="mt-9 flex items-center gap-4">
+            <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
               <Link to="/about" className="btn-base btn-gold">About our agency</Link>
               <span className="font-script text-accent text-[28px] leading-none">— from your neighbors in Magee</span>
             </div>
@@ -187,7 +187,7 @@ const Index = () => {
       {/* QUOTE */}
       <section className="bg-background">
         <div className="grid lg:grid-cols-[5fr_6fr]">
-          <div className="relative bg-canopy text-white p-10 lg:p-16 flex flex-col justify-center overflow-hidden">
+          <div className="relative bg-canopy text-white p-6 sm:p-10 lg:p-16 flex flex-col justify-center overflow-hidden">
             <div aria-hidden className="absolute inset-0 leaf-pattern opacity-20" />
             <div className="relative">
               <span className="eyebrow eyebrow-gold">Let's talk</span>
@@ -201,10 +201,10 @@ const Index = () => {
                 <Phone className="w-7 h-7" /> (601) 397-2982
               </a>
               <p className="mt-5 text-white/70">Mon – Fri · 9:00 AM – 5:00 PM</p>
-              <img src={handshake} alt="" loading="lazy" className="mt-10 w-full max-w-md aspect-[3/2] object-cover rounded-sm shadow-polaroid border-[6px] border-white" style={{ transform: "rotate(-2deg)" }} />
+              <img src={handshake} alt="" loading="lazy" className="mt-10 w-full max-w-md aspect-[3/2] object-cover rounded-sm shadow-polaroid border-[6px] border-white sm:[transform:rotate(-2deg)]" />
             </div>
           </div>
-          <div className="bg-cream p-8 lg:p-16">
+          <div className="bg-cream p-6 sm:p-8 lg:p-16">
             <h3 className="display text-[28px] sm:text-[32px] text-primary mb-7 leading-tight">Request a free quote</h3>
             <QuoteForm />
           </div>
