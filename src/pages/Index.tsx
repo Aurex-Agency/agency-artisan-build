@@ -10,12 +10,12 @@ import { SectionHeading } from "@/components/brand/SectionHeading";
 import { TopoBackground } from "@/components/brand/TopoBackground";
 import { StatTile } from "@/components/brand/StatTile";
 import { Polaroid } from "@/components/brand/Polaroid";
-import portrait from "@/assets/photos/home-hero-portrait.jpg";
-import storefront from "@/assets/photos/magee-storefront.jpg";
 import medicarePhoto from "@/assets/photos/medicare-couple-porch.jpg";
 import healthPhoto from "@/assets/photos/health-family-kitchen.jpg";
 import lifePhoto from "@/assets/photos/life-grandparent-garden.jpg";
-import handshake from "@/assets/photos/office-handshake.jpg";
+import portrait from "@/assets/photos/office-hero.jpg";
+import storefront from "@/assets/photos/office-reception.jpg";
+import handshake from "@/assets/photos/office-desk.jpg";
 
 const CARRIERS = ["Humana", "Aetna", "UnitedHealthcare", "Cigna", "Mutual of Omaha", "Anthem", "Wellcare", "Blue Cross"];
 
@@ -75,14 +75,16 @@ const Index = () => {
           </div>
 
           <div className="relative">
-            <div className="relative aspect-[4/5] w-[78%] sm:w-full max-w-[340px] sm:max-w-[460px] mx-auto">
+            <div className="relative aspect-[4/5] w-full max-w-[360px] sm:max-w-[460px] mx-auto">
               <BrandTree variant="full" glow className="absolute inset-0 w-full h-full opacity-70 sm:opacity-100" />
-              <img
-                src={portrait}
-                alt="A Wood Insurance Agency agent at her desk in the Magee, MS office"
-                className="absolute bottom-0 right-0 left-0 sm:left-auto mx-auto sm:mx-0 w-[88%] sm:w-[62%] aspect-[4/5] object-cover rounded-sm shadow-polaroid border-[6px] border-white"
-                style={{ transform: "rotate(3deg)" }}
-              />
+              <div className="absolute bottom-2 left-0 right-0 sm:left-auto sm:right-0 sm:w-[88%] mx-auto sm:mx-0 w-[92%] flex justify-center">
+                <img
+                  src={portrait}
+                  alt="The Wood Insurance Agency team at the front desk in the Magee, MS office"
+                  className="w-full aspect-[4/3] object-cover rounded-sm shadow-polaroid border-[6px] border-white"
+                  style={{ transform: "rotate(2deg)" }}
+                />
+              </div>
               <div className="absolute -top-2 left-0 sm:-top-4 sm:-left-2">
                 <LeafBadge rotate={-12}>Free to You</LeafBadge>
               </div>
