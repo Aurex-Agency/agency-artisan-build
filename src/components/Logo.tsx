@@ -24,7 +24,7 @@ export const Logo = ({ variant = "dark", className = "" }: LogoProps) => {
       >
         <img
           src={logoSrc}
-          alt="Wood Insurance Agency — Protecting What Matters"
+          alt="Wood Insurance Agency, Protecting What Matters"
           className="h-16 sm:h-20 lg:h-24 w-auto transition-transform group-hover:scale-[1.02]"
           loading="eager"
           decoding="async"
