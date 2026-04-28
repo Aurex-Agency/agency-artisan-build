@@ -6,18 +6,18 @@ import office1 from "@/assets/office-waiting.jpg";
 import office2 from "@/assets/office-desk.jpg";
 
 const STEPS = [
-  { n: "01", title: "I Listen First.", body: "Before I ever recommend a plan, I take the time to understand your situation. Your doctors. Your medications. Your budget. Your goals. Every client is different, and your coverage should reflect that." },
-  { n: "02", title: "I Shop for You.", body: "I have access to plans from dozens of top-rated carriers. I compare them side by side and bring you the best options, explained in plain English. No jargon, no confusion." },
-  { n: "03", title: "I Stay With You.", body: "My job does not end when you enroll. I am available year-round to answer questions, help with claims, and review your coverage every year to make sure you are still getting the best deal." },
+  { n: "01", title: "We Listen First.", body: "Before we ever recommend a plan, we take the time to understand your situation. Your doctors. Your medications. Your budget. Your goals. Every client is different, and your coverage should reflect that." },
+  { n: "02", title: "We Shop for You.", body: "Our team has access to plans from dozens of top-rated carriers. We compare them side by side and bring you the best options, explained in plain English. No jargon, no confusion." },
+  { n: "03", title: "We Stay With You.", body: "Our job does not end when you enroll. We are available year-round to answer questions, help with claims, and review your coverage every year to make sure you are still getting the best deal." },
 ];
 
 const About = () => {
   return (
     <Layout>
       <Seo
-        title="About Cindy Woods | Wood Insurance Agency Magee, MS"
-        description="Meet Cindy Woods, your local independent insurance agent in Magee, Mississippi. Serving Simpson County families with Medicare, health, and life insurance guidance. Call (601) 397-2982."
-        keywords="Cindy Woods insurance agent Magee MS, Wood Insurance Agency about, independent insurance agent Magee Mississippi"
+        title="About Wood Insurance Agency | Magee, MS"
+        description="Wood Insurance Agency is a local independent insurance agency in Magee, Mississippi. Our team serves Simpson County families with Medicare, health, and life insurance guidance. Call (601) 397-2982."
+        keywords="Wood Insurance Agency Magee MS, independent insurance agency Magee Mississippi, local insurance Simpson County"
         path="/about"
       />
 
@@ -25,20 +25,20 @@ const About = () => {
       <section className="bg-background">
         <div className="grid lg:grid-cols-2 min-h-[600px]">
           <div className="relative min-h-[420px] lg:min-h-0">
-            <img src={cindy} alt="Cindy Woods, independent insurance agent in Magee, MS" className="absolute inset-0 w-full h-full object-cover object-top" width={1024} height={1280} />
+            <img src={cindy} alt="Wood Insurance Agency founder Cindy Woods at the Magee, MS office" className="absolute inset-0 w-full h-full object-cover object-top" width={1024} height={1280} />
           </div>
           <div className="container-wide lg:max-w-none lg:px-16 py-16 lg:py-24 flex flex-col justify-center">
-            <span className="eyebrow">About Cindy</span>
+            <span className="eyebrow">About Our Agency</span>
             <h1 className="animate-hero-rise mt-3 text-[32px] sm:text-[40px] lg:text-[48px] text-balance">
               Rooted in Simpson County. Dedicated to Your Protection.
             </h1>
             <div className="animate-hero-rise mt-6 space-y-4 text-[18px] lg:text-[19px] text-text leading-[1.8]" style={{ animationDelay: "60ms" }}>
-              <p>Hi, I am Cindy Woods. As an independent insurance agent based right here in Magee, Mississippi, my goal is simple: to help my neighbors find the right coverage without the confusion.</p>
-              <p>Whether you are turning 65 and navigating Medicare for the first time, looking for a more affordable health plan, or wanting to protect your family with life insurance, I am here to guide you every step of the way.</p>
-              <p>Because I am independent, I do not work for one specific insurance company. I work for you. I shop dozens of top-rated carriers to find the exact plan that fits your health needs and your budget. Best of all, my services are completely free to you. Insurance companies pay agent commissions, so you never pay a dime for my help.</p>
+              <p>Hi, I am Cindy Woods. I founded Wood Insurance Agency right here in Magee, Mississippi to help my neighbors find the right coverage without the confusion — and we have been growing as a local team ever since.</p>
+              <p>Whether you are turning 65 and navigating Medicare for the first time, looking for a more affordable health plan, or wanting to protect your family with life insurance, our agency is here to guide you every step of the way.</p>
+              <p>Because we are independent, we do not work for one specific insurance company. We work for you. Our team shops dozens of top-rated carriers to find the exact plan that fits your health needs and your budget. Best of all, our services are completely free to you. Insurance companies pay agent commissions, so you never pay a dime for our help.</p>
             </div>
             <a href="tel:6013972982" className="animate-hero-rise btn-base btn-gold mt-8 self-start" style={{ animationDelay: "120ms" }}>
-              <Phone className="w-5 h-5" /> Call Me Today at (601) 397-2982
+              <Phone className="w-5 h-5" /> Call Us Today at (601) 397-2982
             </a>
           </div>
         </div>
@@ -77,7 +77,7 @@ const About = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <img src={office1} alt="Office waiting area with dark wood furniture and bookshelves" loading="lazy" width={1280} height={960} className="w-full h-[280px] lg:h-[400px] object-cover rounded-xl shadow-card" />
-            <img src={office2} alt="Cindy's private office with warm lighting and gold-framed mirror" loading="lazy" width={1280} height={960} className="w-full h-[280px] lg:h-[400px] object-cover rounded-xl shadow-card" />
+            <img src={office2} alt="Our private consultation office with warm lighting and gold-framed mirror" loading="lazy" width={1280} height={960} className="w-full h-[280px] lg:h-[400px] object-cover rounded-xl shadow-card" />
           </div>
 
           <div className="mt-12 grid sm:grid-cols-3 gap-6 bg-muted rounded-xl p-8">

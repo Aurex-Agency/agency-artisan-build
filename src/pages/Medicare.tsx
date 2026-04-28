@@ -18,12 +18,12 @@ const OPTIONS = [
   {
     icon: FileText,
     title: "Medicare Supplement (Medigap)",
-    body: "A Medicare Supplement plan works alongside Original Medicare to help pay costs that Medicare does not fully cover, like deductibles, copayments, and coinsurance. These plans are standardized, meaning a Plan G from one company offers the same benefits as a Plan G from another. The difference is the premium, which is why shopping multiple carriers with an independent agent like Cindy is so valuable.",
+    body: "A Medicare Supplement plan works alongside Original Medicare to help pay costs that Medicare does not fully cover, like deductibles, copayments, and coinsurance. These plans are standardized, meaning a Plan G from one company offers the same benefits as a Plan G from another. The difference is the premium, which is why shopping multiple carriers with an independent agency like Wood Insurance is so valuable.",
   },
   {
     icon: Pill,
     title: "Part D Prescription Drug Coverage",
-    body: "Part D plans help cover the cost of prescription medications. If you have Original Medicare and a Medigap plan, you will need a separate Part D plan. If you have a Medicare Advantage plan, drug coverage is usually included. Cindy will review your current medications and find a plan that covers them at the lowest possible cost.",
+    body: "Part D plans help cover the cost of prescription medications. If you have Original Medicare and a Medigap plan, you will need a separate Part D plan. If you have a Medicare Advantage plan, drug coverage is usually included. Our team will review your current medications and find a plan that covers them at the lowest possible cost.",
   },
 ];
 
@@ -55,7 +55,7 @@ const Medicare = () => {
     <Layout>
       <Seo
         title="Medicare Plans in Magee, MS | Wood Insurance Agency"
-        description="Confused about Medicare? Cindy Woods helps Magee and Simpson County residents compare Medicare Advantage, Medicare Supplement, and Part D plans at no cost. Call (601) 397-2982 today."
+        description="Confused about Medicare? Wood Insurance Agency helps Magee and Simpson County residents compare Medicare Advantage, Medicare Supplement, and Part D plans at no cost. Call (601) 397-2982 today."
         keywords="Medicare agent Magee MS, Medicare Advantage Mississippi, Medicare Supplement Magee, turning 65 Medicare Mississippi"
         path="/medicare"
       />
@@ -132,14 +132,14 @@ const Medicare = () => {
         <div className="bg-primary text-white p-10 lg:p-20 flex flex-col justify-center">
           <span className="eyebrow eyebrow-gold">Independent Advantage</span>
           <h2 className="mt-3 text-[28px] sm:text-[36px] lg:text-[38px] text-white">
-            Cindy Works for You. Not for an Insurance Company.
+            We Work for You. Not for an Insurance Company.
           </h2>
           <p className="mt-6 text-[18px] text-white/90">
-            As an independent agent, Cindy is not tied to any single insurance company. She has access to plans from dozens of top-rated carriers and her only job is to find the one that fits your health needs and your budget. And her services are completely free to you. Insurance companies pay agent commissions, so you never pay a dime for Cindy's help.
+            As an independent agency, Wood Insurance is not tied to any single insurance company. We have access to plans from dozens of top-rated carriers and our only job is to find the one that fits your health needs and your budget. And our services are completely free to you. Insurance companies pay agent commissions, so you never pay a dime for our help.
           </p>
         </div>
         <div className="p-10 lg:p-20 flex flex-col justify-center">
-          <h3 className="text-[24px] mb-6">What you get with Cindy</h3>
+          <h3 className="text-[24px] mb-6">What you get with Wood Insurance</h3>
           <ul className="space-y-5">
             {CHECKS.map((c) => (
               <li key={c} className="flex items-start gap-4">
@@ -156,7 +156,7 @@ const Medicare = () => {
       <CTASection
         eyebrow="Free Consultation"
         headline="Ready to Find Your Medicare Plan?"
-        body="Call Cindy today or request a consultation. There is no obligation, and the conversation is completely free."
+        body="Call our team today or request a consultation. There is no obligation, and the conversation is completely free."
       />
     </Layout>
   );

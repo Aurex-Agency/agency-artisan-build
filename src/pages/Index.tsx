@@ -13,7 +13,7 @@ const ROWS = [
   {
     label: "Medicare Solutions",
     headline: "Turning 65 Soon? We Make Medicare Simple.",
-    body: "Medicare has a lot of moving parts. Parts A and B. Advantage plans. Supplements. Drug coverage. It can feel like a full-time job just to figure out what you need. Cindy will sit down with you, review your doctors and medications, and compare plans from top carriers like Humana, Aetna, and UnitedHealthcare, completely free of charge.",
+    body: "Medicare has a lot of moving parts. Parts A and B. Advantage plans. Supplements. Drug coverage. It can feel like a full-time job just to figure out what you need. Our agents will sit down with you, review your doctors and medications, and compare plans from top carriers like Humana, Aetna, and UnitedHealthcare, completely free of charge.",
     cta: "Learn More About Medicare",
     href: "/medicare",
     image: medicareImg,
@@ -44,19 +44,19 @@ const ROWS = [
 
 const REVIEWS = [
   {
-    quote: "Cindy made the whole Medicare process so easy. I had no idea what I was doing when I turned 65, and she walked me through everything step by step. I ended up saving over $80 a month on my plan.",
+    quote: "The Wood Insurance team made the whole Medicare process so easy. I had no idea what I was doing when I turned 65, and they walked me through everything step by step. I ended up saving over $80 a month on my plan.",
     name: "Linda T.",
     place: "Magee, MS",
     tall: false,
   },
   {
-    quote: "I have been using Cindy for my health insurance for years. Every time I call, she actually answers. She found me a plan that kept my same doctors and cut my premium by almost $200 a month. I tell everyone I know about her.",
+    quote: "I have been using Wood Insurance Agency for my health insurance for years. Every time I call, a real person answers. They found me a plan that kept my same doctors and cut my premium by almost $200 a month. I tell everyone I know about them.",
     name: "James R.",
     place: "Mendenhall, MS",
     tall: true,
   },
   {
-    quote: "When my husband passed, Cindy helped me figure out my life insurance and Medicare options all at once. She was patient, kind, and never once made me feel rushed. She is a blessing to this community.",
+    quote: "When my husband passed, the team at Wood Insurance helped me figure out my life insurance and Medicare options all at once. They were patient, kind, and never once made me feel rushed. They are a blessing to this community.",
     name: "Patricia W.",
     place: "Simpson County, MS",
     tall: false,
@@ -68,7 +68,7 @@ const Index = () => {
     <Layout>
       <Seo
         title="Wood Insurance Agency | Medicare, Health & Life Insurance in Magee, MS"
-        description="Cindy Woods is your local independent insurance agent in Magee, MS. Get expert help with Medicare, health insurance, and life insurance. Serving Simpson County and all of Mississippi. Call (601) 397-2982."
+        description="Wood Insurance Agency is your local independent insurance agency in Magee, MS. Our team helps with Medicare, health insurance, and life insurance. Serving Simpson County and all of Mississippi. Call (601) 397-2982."
         keywords="Medicare agent Magee MS, health insurance Magee Mississippi, life insurance Simpson County MS, independent insurance agent Magee"
         path="/"
       />
@@ -85,7 +85,7 @@ const Index = () => {
             </p>
             <div className="animate-hero-rise mt-8 flex flex-col sm:flex-row gap-4" style={{ animationDelay: "120ms" }}>
               <a href="tel:6013972982" className="btn-base btn-gold">
-                <Phone className="w-5 h-5" /> Call Cindy Today
+                <Phone className="w-5 h-5" /> Call Our Team Today
               </a>
               <a href="#coverage" className="btn-base btn-outline-navy">Explore Coverage</a>
             </div>
@@ -101,7 +101,7 @@ const Index = () => {
           <div className="relative lg:min-h-[600px] min-h-[380px] bg-primary/5">
             <img
               src={cindyHero}
-              alt="Cindy Woods, independent insurance agent, smiling in her Magee office"
+              alt="Wood Insurance Agency team member welcoming a client at the Magee office"
               className="absolute inset-0 w-full h-full object-cover object-top"
               width={1024}
               height={1280}
@@ -181,7 +181,7 @@ const Index = () => {
                 </div>
               ))}
             </div>
-            <Link to="/about" className="btn-base btn-gold mt-10">Meet Cindy Woods</Link>
+            <Link to="/about" className="btn-base btn-gold mt-10">About Our Agency</Link>
           </div>
           <div className="relative">
             <img
