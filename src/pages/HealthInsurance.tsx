@@ -101,10 +101,10 @@ const HealthInsurance = () => {
             <span className="eyebrow">The Independent Advantage</span>
             <h2 className="mt-3 text-[30px] sm:text-[38px]">We Shop. You Save.</h2>
             <p className="mt-6 text-[18px] text-text">
-              Unlike a captive agent who can only offer plans from one company, Cindy is an independent agent with access to multiple carriers. That means she can compare dozens of plans side by side and find the one that gives you the best coverage at the lowest price. And because agents are paid by the insurance companies, not by you, her help is completely free.
+              Unlike a captive agent who can only offer plans from one company, Wood Insurance Agency is an independent agency with access to multiple carriers. That means we can compare dozens of plans side by side and find the one that gives you the best coverage at the lowest price. And because agents are paid by the insurance companies, not by you, our help is completely free.
             </p>
             <p className="mt-5 text-[17px] italic text-muted-foreground">
-              "My services are completely free to you."
+              "Our services are completely free to you."
             </p>
           </div>
           <div className="bg-background rounded-xl shadow-card border border-border overflow-hidden">

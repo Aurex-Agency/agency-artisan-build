@@ -29,7 +29,7 @@ const LifeInsurance = () => {
     <Layout>
       <Seo
         title="Life Insurance in Magee, MS | Term & Whole Life Policies"
-        description="Protect your family's financial future with life insurance from Wood Insurance Agency in Magee, MS. Cindy Woods helps you find affordable term, whole life, and final expense coverage. Call (601) 397-2982."
+        description="Protect your family's financial future with life insurance from Wood Insurance Agency in Magee, MS. Our team helps you find affordable term, whole life, and final expense coverage. Call (601) 397-2982."
         keywords="life insurance Magee MS, term life insurance Mississippi, final expense insurance Mississippi, whole life insurance Simpson County"
         path="/life-insurance"
       />

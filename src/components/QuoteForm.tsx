@@ -22,7 +22,7 @@ export const QuoteForm = ({ variant = "default", submitLabel = "Request My Free 
       (e.target as HTMLFormElement).reset();
       toast({
         title: "Thank you, we got it.",
-        description: "Cindy or her team will be in touch within one business day.",
+        description: "Our team will be in touch within one business day.",
       });
     }, 600);
   };
