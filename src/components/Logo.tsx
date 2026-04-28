@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoSrc from "@/assets/logo.png";
+import logoSrc from "@/assets/wood-logo.png";
 
 interface LogoProps {
   variant?: "dark" | "light";
