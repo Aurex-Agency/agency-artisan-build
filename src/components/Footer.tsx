@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="relative">
       <div className="container-wide py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <Logo variant="light" />
+          <Logo />
           <div className="mt-6 space-y-3 text-white/85">
             <p className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" aria-hidden />
