@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
-import { Phone, Star, ArrowRight, HeartPulse, ShieldCheck, Leaf } from "lucide-react";
+import { Phone, Star, ArrowRight, HeartPulse, ShieldCheck, Leaf, Award, MapPin, Users } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { QuoteForm } from "@/components/QuoteForm";
-import { BrandTree } from "@/components/brand/BrandTree";
-import { LeafBadge } from "@/components/brand/LeafBadge";
 import { Marquee } from "@/components/brand/Marquee";
 import { SectionHeading } from "@/components/brand/SectionHeading";
 import { TopoBackground } from "@/components/brand/TopoBackground";
@@ -43,53 +41,79 @@ const Index = () => {
 
       {/* HERO */}
       <section className="relative bg-cream overflow-hidden">
-        <TopoBackground className="text-primary" opacity={0.06} />
-        <div className="container-wide grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-16 items-center pt-10 pb-14 lg:pt-20 lg:pb-28 relative">
+        <TopoBackground className="text-primary" opacity={0.05} />
+        <div className="container-wide grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-14 items-center pt-10 pb-14 lg:pt-20 lg:pb-24 relative">
           <div>
             <span className="eyebrow">Independent · Local · Free to You</span>
-            <h1 className="display animate-hero-rise mt-4 sm:mt-5 text-[38px] sm:text-[60px] lg:text-[78px] xl:text-[88px] leading-[1] sm:leading-[0.96] tracking-[-0.035em] text-primary text-balance">
-              Roots run <em className="italic text-secondary-deep">deep</em>
+            <h1 className="display animate-hero-rise mt-4 sm:mt-5 text-[38px] sm:text-[58px] lg:text-[72px] xl:text-[82px] leading-[1] sm:leading-[0.98] tracking-[-0.035em] text-primary text-balance">
+              Insurance you can <em className="italic text-secondary-deep">trust</em>,
               <br />
-              in Simpson County.
+              from neighbors you know.
             </h1>
-            <p className="animate-hero-rise mt-5 sm:mt-7 text-[17px] sm:text-[19px] lg:text-[21px] text-ink/80 max-w-xl leading-[1.55] sm:leading-[1.6]" style={{ animationDelay: "60ms" }}>
-              Honest, sit-down guidance for your <span className="font-display italic">Medicare</span>, <span className="font-display italic">Health</span>, and <span className="font-display italic">Life</span> insurance from your neighbors in Magee.
+            <p className="animate-hero-rise mt-5 sm:mt-7 text-[17px] sm:text-[19px] lg:text-[20px] text-ink/80 max-w-xl leading-[1.55] sm:leading-[1.6]" style={{ animationDelay: "60ms" }}>
+              Honest, sit-down guidance for your <span className="font-display italic">Medicare</span>, <span className="font-display italic">Health</span>, and <span className="font-display italic">Life</span> insurance — right here in Magee, Mississippi.
             </p>
+
             <div className="animate-hero-rise mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4" style={{ animationDelay: "120ms" }}>
               <a href="tel:6013972982" className="btn-base btn-gold">
                 <Phone className="w-5 h-5" /> (601) 397-2982
               </a>
               <a href="#coverage" className="btn-base btn-outline-navy">Explore coverage</a>
             </div>
-            <div className="animate-hero-rise mt-7 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4" style={{ animationDelay: "180ms" }}>
-              <div className="flex -space-x-2">
-                {["LT", "JR", "PW"].map((i) => (
-                  <span key={i} className="w-9 h-9 rounded-full bg-primary text-white text-[12px] font-semibold flex items-center justify-center border-2 border-cream">{i}</span>
-                ))}
-              </div>
+
+            {/* Trust row: rating + badges */}
+            <div className="animate-hero-rise mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5" style={{ animationDelay: "180ms" }}>
               <div className="flex items-center gap-2">
-                <div className="flex" aria-label="5 of 5 stars">{[0,1,2,3,4].map((i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}</div>
-                <span className="text-[13px] sm:text-[14px] text-ink/70">Rated 5.0 by Simpson County families</span>
+                <div className="flex" aria-label="5 of 5 stars">{[0,1,2,3,4].map((i) => <Star key={i} className="w-[18px] h-[18px] fill-accent text-accent" />)}</div>
+                <span className="text-[14px] font-semibold text-ink">5.0 from local families</span>
+              </div>
+              <span aria-hidden className="hidden sm:inline-block w-px h-5 bg-ink/15" />
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-ink/70">
+                <span className="inline-flex items-center gap-1.5"><Award className="w-4 h-4 text-secondary" /> Licensed in MS</span>
+                <span className="inline-flex items-center gap-1.5"><MapPin className="w-4 h-4 text-secondary" /> Magee, MS</span>
+                <span className="inline-flex items-center gap-1.5"><Users className="w-4 h-4 text-secondary" /> Independent Agents</span>
               </div>
             </div>
           </div>
 
+          {/* Photo + floating proof tiles */}
           <div className="relative">
-            <div className="relative aspect-[4/5] w-full max-w-[360px] sm:max-w-[460px] mx-auto">
-              <BrandTree variant="full" glow className="absolute inset-0 w-full h-full opacity-70 sm:opacity-100" />
-              <div className="absolute bottom-2 left-0 right-0 sm:left-auto sm:right-0 sm:w-[88%] mx-auto sm:mx-0 w-[92%] flex justify-center">
+            <div className="relative w-full max-w-[520px] mx-auto">
+              <div className="relative rounded-2xl overflow-hidden shadow-elevated ring-1 ring-ink/5">
                 <img
                   src={portrait}
-                  alt="The Wood Insurance Agency team at the front desk in the Magee, MS office"
-                  className="w-full aspect-[4/3] object-cover rounded-sm shadow-polaroid border-[6px] border-white"
-                  style={{ transform: "rotate(2deg)" }}
+                  alt="The Wood Insurance Agency team welcoming clients at the front desk of the Magee, MS office"
+                  className="w-full aspect-[5/4] object-cover"
                 />
+                {/* Subtle bottom gradient for legibility */}
+                <div aria-hidden className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink/55 to-transparent" />
+                {/* On-image caption */}
+                <div className="absolute left-5 bottom-4 right-5 text-white">
+                  <p className="font-display text-[18px] sm:text-[20px] leading-tight">Stop in. We'll put on the coffee.</p>
+                  <p className="text-[13px] text-white/85 mt-0.5">Wood Insurance Agency · Highway 149, Magee</p>
+                </div>
               </div>
-              <div className="absolute -top-2 left-0 sm:-top-4 sm:-left-2">
-                <LeafBadge rotate={-12}>Free to You</LeafBadge>
+
+              {/* Floating credibility tile - top left */}
+              <div className="hidden sm:flex absolute -top-4 -left-4 lg:-left-6 bg-white rounded-xl shadow-elevated px-4 py-3 items-center gap-3 ring-1 ring-ink/5">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Award className="w-5 h-5 text-primary" />
+                </div>
+                <div className="leading-tight">
+                  <div className="font-display text-[18px] text-primary">A+</div>
+                  <div className="text-[11px] uppercase tracking-[0.14em] text-ink/65">Local reputation</div>
+                </div>
               </div>
-              <div className="hidden sm:block absolute top-1/3 -right-2">
-                <LeafBadge rotate={8} variant="green">Local since day one</LeafBadge>
+
+              {/* Floating credibility tile - bottom right */}
+              <div className="absolute -bottom-5 right-2 sm:-right-4 lg:-right-6 bg-white rounded-xl shadow-elevated px-4 py-3 flex items-center gap-3 ring-1 ring-ink/5">
+                <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5 text-accent-dark" />
+                </div>
+                <div className="leading-tight">
+                  <div className="font-display text-[18px] text-primary">20+ carriers</div>
+                  <div className="text-[11px] uppercase tracking-[0.14em] text-ink/65">Shopped for you</div>
+                </div>
               </div>
             </div>
           </div>
