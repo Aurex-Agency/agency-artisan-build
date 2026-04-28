@@ -18,7 +18,7 @@ export const Logo = ({ variant = "dark", className = "" }: LogoProps) => {
       <span
         className={
           isLight
-            ? "inline-flex items-center rounded-md bg-white px-3 py-2 shadow-sm"
+            ? "inline-flex items-center [&_img]:brightness-0 [&_img]:invert"
             : "inline-flex items-center"
         }
       >
