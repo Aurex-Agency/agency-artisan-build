@@ -107,27 +107,59 @@ const HealthInsurance = () => {
               "Our services are completely free to you."
             </p>
           </div>
-          <div className="bg-background rounded-xl shadow-card border border-border overflow-hidden">
-            <div className="grid grid-cols-[1.4fr_1fr_1fr] bg-primary text-white text-sm font-semibold">
-              <div className="p-4">Compare</div>
-              <div className="p-4 text-center bg-primary-dark">Wood Insurance</div>
-              <div className="p-4 text-center text-white/80">Captive Agent</div>
-            </div>
-            {COMPARE.map((c, i) => (
-              <div key={c.row} className={`grid grid-cols-[1.4fr_1fr_1fr] items-center text-[15px] ${i % 2 ? "bg-muted" : "bg-background"}`}>
-                <div className="p-4 font-semibold text-dark">{c.row}</div>
-                <div className="p-4 text-center">
-                  <div className="inline-flex items-center gap-2 text-secondary font-medium">
-                    <Check className="w-5 h-5" strokeWidth={3} /> {c.woods}
-                  </div>
-                </div>
-                <div className="p-4 text-center">
-                  <div className="inline-flex items-center gap-2 text-muted-foreground">
-                    <X className="w-5 h-5" /> {c.captive}
-                  </div>
-                </div>
+          <div>
+            {/* Desktop: 3-column comparison table */}
+            <div className="hidden md:block bg-background rounded-xl shadow-card border border-border overflow-hidden">
+              <div className="grid grid-cols-[1.4fr_1fr_1fr] bg-primary text-white text-sm font-semibold">
+                <div className="p-4">Compare</div>
+                <div className="p-4 text-center bg-primary-dark">Wood Insurance</div>
+                <div className="p-4 text-center text-white/80">Captive Agent</div>
               </div>
-            ))}
+              {COMPARE.map((c, i) => (
+                <div key={c.row} className={`grid grid-cols-[1.4fr_1fr_1fr] items-center text-[15px] ${i % 2 ? "bg-muted" : "bg-background"}`}>
+                  <div className="p-4 font-semibold text-dark">{c.row}</div>
+                  <div className="p-4 text-center">
+                    <div className="inline-flex items-center gap-2 text-secondary font-medium">
+                      <Check className="w-5 h-5" strokeWidth={3} /> {c.woods}
+                    </div>
+                  </div>
+                  <div className="p-4 text-center">
+                    <div className="inline-flex items-center gap-2 text-muted-foreground">
+                      <X className="w-5 h-5" /> {c.captive}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Mobile: stacked comparison cards */}
+            <div className="md:hidden flex flex-col gap-4">
+              {COMPARE.map((c) => (
+                <div key={c.row} className="bg-background rounded-xl shadow-card border border-border overflow-hidden">
+                  <div className="bg-primary text-white px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.14em]">
+                    {c.row}
+                  </div>
+                  <div className="p-5 border-b border-border flex items-start gap-3">
+                    <div className="mt-0.5 w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+                      <Check className="w-5 h-5 text-secondary" strokeWidth={3} />
+                    </div>
+                    <div>
+                      <div className="text-[12px] font-bold uppercase tracking-[0.14em] text-secondary">Wood Insurance</div>
+                      <div className="mt-1 text-[15px] text-dark font-medium leading-snug">{c.woods}</div>
+                    </div>
+                  </div>
+                  <div className="p-5 flex items-start gap-3 bg-muted/40">
+                    <div className="mt-0.5 w-8 h-8 rounded-full bg-muted flex items-center justify-center shrink-0">
+                      <X className="w-5 h-5 text-muted-foreground" />
+                    </div>
+                    <div>
+                      <div className="text-[12px] font-bold uppercase tracking-[0.14em] text-muted-foreground">Captive Agent</div>
+                      <div className="mt-1 text-[15px] text-text leading-snug">{c.captive}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
