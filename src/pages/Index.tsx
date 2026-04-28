@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Star, ArrowRight, HeartPulse, ShieldCheck, Leaf, Award, MapPin, Users } from "lucide-react";
+import { Phone, Star, ArrowRight, HeartPulse, ShieldCheck, Leaf, Award, MapPin, Users, Quote } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { QuoteForm } from "@/components/QuoteForm";
