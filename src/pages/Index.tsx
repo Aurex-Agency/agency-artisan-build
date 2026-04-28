@@ -207,10 +207,30 @@ const Index = () => {
       </section>
 
       {/* REVIEWS */}
-      <section className="relative bg-cream py-20 lg:py-28 paper-grain">
+      <section className="relative bg-cream py-14 lg:py-28 paper-grain">
         <div className="container-wide relative">
           <SectionHeading eyebrow="Kind words" title="Don't just take our word for it." underlinedWord="word" intro="Real families across Simpson County and the state of Mississippi." />
-          <div className="mt-16 grid md:grid-cols-3 gap-10 lg:gap-6">
+
+          {/* Mobile: big stacked review cards */}
+          <div className="mt-10 flex flex-col gap-6 md:hidden">
+            {REVIEWS.map((r, i) => (
+              <article key={i} className="bg-white rounded-2xl shadow-card border border-cream-deep p-6">
+                <div className="flex gap-1 mb-4" aria-label="5 of 5 stars">
+                  {[0,1,2,3,4].map((s) => <Star key={s} className="w-5 h-5 fill-accent text-accent" />)}
+                </div>
+                <blockquote className="font-display italic text-[20px] leading-[1.45] text-ink/90">
+                  &ldquo;{r.quote}&rdquo;
+                </blockquote>
+                <div className="mt-5 pt-5 border-t border-cream-deep">
+                  <div className="font-display text-[18px] text-primary">{r.name}</div>
+                  <div className="text-[12px] uppercase tracking-[0.18em] text-ink/60 mt-1">{r.place}</div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Desktop: original polaroid grid */}
+          <div className="mt-16 hidden md:grid md:grid-cols-3 gap-10 lg:gap-6">
             {REVIEWS.map((r, i) => (
               <Polaroid key={i} rotate={r.rotate} className="max-w-[320px] mx-auto" caption={<><span className="block">{r.name}</span><span className="block text-[14px] text-ink/60 font-sans tracking-wide uppercase mt-1">{r.place}</span></>}>
                 <div className="absolute inset-0 flex flex-col p-5 bg-cream-deep">
