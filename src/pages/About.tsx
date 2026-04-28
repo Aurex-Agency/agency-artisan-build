@@ -2,7 +2,7 @@ import { Phone, MapPin, Clock } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import cindy from "@/assets/cindy-hero.jpg";
-import office1 from "@/assets/office-waiting.jpg";
+import office1 from "@/assets/photos/office-reception.jpg";
 import office2 from "@/assets/office-desk.jpg";
 
 const STEPS = [

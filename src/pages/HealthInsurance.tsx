@@ -5,7 +5,7 @@ import { Seo } from "@/components/Seo";
 import { CTASection } from "@/components/CTASection";
 import healthHero from "@/assets/health-hero.jpg";
 import healthFamily from "@/assets/medicare-couple.jpg";
-import healthDoctor from "@/assets/health-doctor.jpg";
+import healthDoctor from "@/assets/health-laptop.jpg";
 import healthLaptop from "@/assets/health-laptop.jpg";
 
 const ROWS = [
