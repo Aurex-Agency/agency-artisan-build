@@ -77,12 +77,14 @@ const Index = () => {
           <div className="relative">
             <div className="relative aspect-[4/5] w-full max-w-[360px] sm:max-w-[460px] mx-auto">
               <BrandTree variant="full" glow className="absolute inset-0 w-full h-full opacity-70 sm:opacity-100" />
-              <img
-                src={portrait}
-                alt="The Wood Insurance Agency team at the front desk in the Magee, MS office"
-                className="absolute bottom-2 left-1/2 -translate-x-1/2 sm:left-auto sm:right-0 sm:translate-x-0 w-[92%] sm:w-[88%] aspect-[4/3] object-cover rounded-sm shadow-polaroid border-[6px] border-white"
-                style={{ transform: "rotate(2deg)" }}
-              />
+              <div className="absolute bottom-2 left-0 right-0 sm:left-auto sm:right-0 sm:w-[88%] mx-auto sm:mx-0 w-[92%] flex justify-center">
+                <img
+                  src={portrait}
+                  alt="The Wood Insurance Agency team at the front desk in the Magee, MS office"
+                  className="w-full aspect-[4/3] object-cover rounded-sm shadow-polaroid border-[6px] border-white"
+                  style={{ transform: "rotate(2deg)" }}
+                />
+              </div>
               <div className="absolute -top-2 left-0 sm:-top-4 sm:-left-2">
                 <LeafBadge rotate={-12}>Free to You</LeafBadge>
               </div>
