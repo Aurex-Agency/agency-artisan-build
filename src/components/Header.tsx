@@ -27,7 +27,7 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border shadow-[0_1px_8px_-2px_hsl(218_27%_17%/0.06)]">
-      <div className="container-wide flex items-center justify-between h-[78px]">
+      <div className="container-wide flex items-center justify-between h-[104px]">
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-8" aria-label="Main">
