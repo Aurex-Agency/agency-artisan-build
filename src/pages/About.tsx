@@ -22,12 +22,18 @@ const About = () => {
       />
 
       {/* HERO */}
-      <section className="bg-background">
-        <div className="grid lg:grid-cols-2 min-h-[600px]">
-          <div className="relative min-h-[420px] lg:min-h-0">
-            <img src={cindy} alt="Wood Insurance Agency founder Cindy Woods at the Magee, MS office" className="absolute inset-0 w-full h-full object-cover object-top" width={1024} height={1280} />
+      <section className="bg-muted">
+        <div className="grid lg:grid-cols-2 lg:items-stretch">
+          <div className="relative bg-muted aspect-[4/5] sm:aspect-[3/2] lg:aspect-auto lg:min-h-[680px]">
+            <img
+              src={cindy}
+              alt="Wood Insurance Agency founder Cindy Woods at the Magee, MS office"
+              className="absolute inset-0 w-full h-full object-cover object-[center_15%]"
+              width={1400}
+              height={1640}
+            />
           </div>
-          <div className="container-wide lg:max-w-none lg:px-16 py-16 lg:py-24 flex flex-col justify-center">
+          <div className="container-wide lg:max-w-none lg:px-16 py-16 lg:py-24 flex flex-col justify-center bg-background">
             <span className="eyebrow">About Our Agency</span>
             <h1 className="animate-hero-rise mt-3 text-[32px] sm:text-[40px] lg:text-[48px] text-balance">
               Rooted in Simpson County. Dedicated to Your Protection.
