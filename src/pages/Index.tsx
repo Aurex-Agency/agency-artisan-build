@@ -229,17 +229,25 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Desktop: original polaroid grid */}
-          <div className="mt-16 hidden md:grid md:grid-cols-3 gap-10 lg:gap-6">
+          {/* Desktop: clean three-up testimonial cards */}
+          <div className="mt-14 hidden md:grid md:grid-cols-3 gap-6 lg:gap-8">
             {REVIEWS.map((r, i) => (
-              <Polaroid key={i} rotate={r.rotate} className="max-w-[320px] mx-auto" caption={<><span className="block">{r.name}</span><span className="block text-[14px] text-ink/60 font-sans tracking-wide uppercase mt-1">{r.place}</span></>}>
-                <div className="absolute inset-0 flex flex-col p-5 bg-cream-deep">
-                  <div className="flex gap-1 mb-3" aria-label="5 of 5">
-                    {[0,1,2,3,4].map((s) => <Star key={s} className="w-4 h-4 fill-accent text-accent" />)}
-                  </div>
-                  <blockquote className="text-[15px] leading-[1.55] text-ink/85 font-display italic">"{r.quote}"</blockquote>
+              <article
+                key={i}
+                className="relative bg-white rounded-2xl shadow-card border border-cream-deep p-7 lg:p-8 flex flex-col"
+              >
+                <Quote aria-hidden className="absolute -top-3 left-7 w-8 h-8 text-accent fill-accent bg-cream rounded-full p-1.5 shadow-sm" />
+                <div className="flex gap-1 mb-5" aria-label="5 of 5 stars">
+                  {[0,1,2,3,4].map((s) => <Star key={s} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>
-              </Polaroid>
+                <blockquote className="font-display italic text-[18px] lg:text-[19px] leading-[1.55] text-ink/90 flex-1">
+                  &ldquo;{r.quote}&rdquo;
+                </blockquote>
+                <div className="mt-6 pt-5 border-t border-cream-deep">
+                  <div className="font-display text-[18px] text-primary">{r.name}</div>
+                  <div className="text-[11px] uppercase tracking-[0.2em] text-ink/55 mt-1">{r.place}</div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
