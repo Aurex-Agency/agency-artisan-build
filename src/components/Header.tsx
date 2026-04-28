@@ -26,7 +26,7 @@ export const Header = () => {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 bg-background border-b border-border shadow-[0_1px_8px_-2px_hsl(218_27%_17%/0.06)]">
+    <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-cream-deep shadow-[0_1px_8px_-2px_hsl(218_27%_17%/0.06)]">
       <div className="container-wide flex items-center justify-between h-[104px]">
         <Logo />
 
@@ -37,9 +37,9 @@ export const Header = () => {
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `relative text-[16px] font-medium transition-colors py-2 ${
-                  isActive ? "text-primary" : "text-text hover:text-primary"
-                } after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[2px] after:bg-primary after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100 ${
+                `relative text-[15px] font-medium transition-colors py-2 ${
+                  isActive ? "text-primary" : "text-ink/80 hover:text-primary"
+                } after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-[3px] after:rounded-full after:bg-accent after:scale-x-0 after:origin-left after:transition-transform hover:after:scale-x-100 ${
                   isActive ? "after:scale-x-100" : ""
                 }`
               }

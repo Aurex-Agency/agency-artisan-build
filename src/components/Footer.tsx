@@ -4,7 +4,10 @@ import { MapPin, Phone, Clock } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-dark text-white">
+    <footer className="relative bg-canopy text-white overflow-hidden">
+      <div aria-hidden className="absolute inset-0 leaf-pattern opacity-25 pointer-events-none" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40 pointer-events-none" />
+      <div className="relative">
       <div className="container-wide py-16 grid gap-12 md:grid-cols-3">
         <div>
           <Logo variant="light" />
@@ -56,13 +59,18 @@ export const Footer = () => {
       </div>
 
       <div className="border-t border-white/15">
-        <div className="container-wide py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/60">
-          <p>© 2026 Wood Insurance Agency. All rights reserved.</p>
+        <div className="container-wide py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/70">
+          <p className="flex items-center gap-3">
+            <span className="font-script text-accent text-[20px]">From your neighbors in Magee</span>
+            <span className="opacity-50">·</span>
+            <span>© 2026 Wood Insurance Agency</span>
+          </p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-accent transition-colors">Terms of Service</a>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );

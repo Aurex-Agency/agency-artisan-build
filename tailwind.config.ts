@@ -19,6 +19,9 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        cream: "hsl(var(--cream))",
+        "cream-deep": "hsl(var(--cream-deep))",
+        ink: "hsl(var(--ink))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -27,6 +30,7 @@ export default {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          deep: "hsl(var(--secondary-deep))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -40,6 +44,7 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
           dark: "hsl(var(--accent-dark))",
+          soft: "hsl(var(--accent-soft))",
         },
         dark: "hsl(var(--dark))",
         text: "hsl(var(--text))",
@@ -63,13 +68,20 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['"Inter Tight"', 'system-ui', 'sans-serif'],
+        script: ['Caveat', '"Brush Script MT"', 'cursive'],
       },
       boxShadow: {
         card: 'var(--shadow-card)',
         elevated: 'var(--shadow-elevated)',
         cta: 'var(--shadow-cta)',
+        polaroid: 'var(--shadow-polaroid)',
+      },
+      backgroundImage: {
+        canopy: 'var(--gradient-canopy)',
+        sun: 'var(--gradient-sun)',
+        cream: 'var(--gradient-cream)',
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -17,12 +17,17 @@
 
     --secondary: 130 58% 42%;        /* leaf green ~#2DAD3F */
     --secondary-foreground: 0 0% 100%;
+    --secondary-deep: 138 60% 22%;   /* deep forest for backgrounds */
 
     --accent: 42 92% 53%;            /* warm gold ~#F4B81E */
     --accent-foreground: 224 78% 18%;
     --accent-dark: 38 90% 45%;       /* darker amber ~#D99A12 */
+    --accent-soft: 44 90% 88%;       /* pale honey */
 
     --background: 0 0% 100%;
+    --cream: 38 50% 95%;             /* warm off-white #FAF6EE */
+    --cream-deep: 36 35% 90%;        /* slightly darker cream */
+    --ink: 224 60% 10%;              /* deep blue-black */
     --foreground: 218 27% 17%;       /* #1F2937 dark */
 
     --card: 0 0% 100%;
@@ -50,7 +55,13 @@
     --shadow-card: 0 1px 3px 0 hsl(218 27% 17% / 0.06), 0 4px 16px -4px hsl(218 27% 17% / 0.08);
     --shadow-elevated: 0 12px 32px -12px hsl(222 75% 42% / 0.22);
     --shadow-cta: 0 6px 20px -6px hsl(42 92% 53% / 0.5);
+    --shadow-polaroid: 0 14px 30px -14px hsl(224 60% 10% / 0.35), 0 2px 6px -2px hsl(224 60% 10% / 0.12);
     --transition-base: 200ms ease;
+
+    /* Brand gradients */
+    --gradient-canopy: linear-gradient(135deg, hsl(222 75% 42%) 0%, hsl(224 78% 22%) 55%, hsl(138 50% 18%) 100%);
+    --gradient-sun: linear-gradient(135deg, hsl(44 95% 62%) 0%, hsl(38 90% 45%) 100%);
+    --gradient-cream: linear-gradient(180deg, hsl(38 50% 96%) 0%, hsl(36 35% 90%) 100%);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -101,19 +112,21 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Outfit', system-ui, sans-serif;
+    font-family: 'Inter Tight', system-ui, sans-serif;
     font-size: 18px;
     line-height: 1.7;
     color: hsl(var(--text));
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    font-feature-settings: "ss01", "cv11";
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
     color: hsl(var(--primary));
   }
 
@@ -130,28 +143,50 @@
 
 @layer components {
   .eyebrow {
-    @apply inline-block text-[13px] font-semibold uppercase tracking-[0.18em];
+    @apply inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.24em];
     color: hsl(var(--secondary));
+    font-family: 'Inter Tight', sans-serif;
   }
   .eyebrow-gold { color: hsl(var(--accent)); }
+  .eyebrow-cream { color: hsl(var(--cream)); }
+  .eyebrow::before {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: currentColor;
+    display: inline-block;
+  }
+
+  .script {
+    font-family: 'Caveat', 'Brush Script MT', cursive;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  .display {
+    font-family: 'Fraunces', Georgia, serif;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
 
   .container-wide {
     @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12;
   }
 
   .btn-base {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
     min-height: 52px;
     padding: 0 1.75rem;
     font-size: 17px;
+    letter-spacing: 0.01em;
   }
   .btn-gold {
-    background-color: hsl(var(--accent));
+    background-image: var(--gradient-sun);
     color: hsl(var(--dark));
     box-shadow: var(--shadow-cta);
   }
   .btn-gold:hover {
-    background-color: hsl(var(--accent-dark));
+    background-image: linear-gradient(135deg, hsl(44 95% 65%) 0%, hsl(38 90% 50%) 100%);
     transform: translateY(-1px);
   }
   .btn-navy {
@@ -185,6 +220,26 @@
   .btn-outline-dark:hover {
     background-color: hsl(var(--dark));
     color: white;
+  }
+
+  /* Decorative paper grain via SVG noise */
+  .paper-grain {
+    position: relative;
+  }
+  .paper-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.18  0 0 0 0 0.12  0 0 0 0 0.06  0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+  }
+
+  /* Leaf scatter pattern */
+  .leaf-pattern {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'><g fill='none' stroke='hsl(42 92%25 65%25)' stroke-width='1.2' opacity='0.45'><path d='M30 40 Q40 22 60 28 Q52 50 30 40 Z'/><path d='M120 110 Q132 92 154 100 Q146 124 120 110 Z'/><path d='M70 130 Q80 112 100 118 Q92 142 70 130 Z'/></g></svg>");
+    background-repeat: repeat;
   }
 }
 
