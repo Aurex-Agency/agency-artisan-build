@@ -3,7 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import cindy from "@/assets/cindy-hero.jpg";
 import office1 from "@/assets/photos/office-reception.jpg";
-import office2 from "@/assets/office-desk.jpg";
+import office2 from "@/assets/storefront.jpg";
 
 const STEPS = [
   { n: "01", title: "We Listen First.", body: "Before we ever recommend a plan, we take the time to understand your situation. Your doctors. Your medications. Your budget. Your goals. Every client is different, and your coverage should reflect that." },
@@ -77,7 +77,7 @@ const About = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <img src={office1} alt="Office waiting area with dark wood furniture and bookshelves" loading="lazy" width={1280} height={960} className="w-full h-[280px] lg:h-[400px] object-cover rounded-xl shadow-card" />
-            <img src={office2} alt="Our private consultation office with warm lighting and gold-framed mirror" loading="lazy" width={1280} height={960} className="w-full h-[280px] lg:h-[400px] object-cover rounded-xl shadow-card" />
+            <img src={office2} alt="Wood Insurance Agency storefront on Highway 149 in Magee, Mississippi" loading="lazy" width={1280} height={960} className="w-full h-[280px] lg:h-[400px] object-cover rounded-xl shadow-card" />
           </div>
 
           <div className="mt-12 grid sm:grid-cols-3 gap-6 bg-muted rounded-xl p-8">
