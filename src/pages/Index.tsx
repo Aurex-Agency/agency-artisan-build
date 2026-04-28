@@ -164,29 +164,44 @@ const Index = () => {
       <section className="relative bg-canopy text-white overflow-hidden">
         <div aria-hidden className="absolute inset-0 leaf-pattern opacity-20" />
         <TopoBackground className="text-white" opacity={0.08} />
-        <div className="container-wide py-20 lg:py-28 grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center relative">
+        <div className="container-wide py-14 lg:py-28 grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center relative">
           <div>
             <span className="eyebrow eyebrow-gold">Why Wood Insurance</span>
-            <h2 className="display mt-5 text-[36px] sm:text-[48px] lg:text-[58px] leading-[1] text-white tracking-[-0.025em]">
+            <h2 className="display mt-4 sm:mt-5 text-[32px] sm:text-[44px] lg:text-[58px] leading-[1.05] sm:leading-[1] text-white tracking-[-0.02em]">
               Big city options.
               <br />
               <em className="italic text-accent">Small town</em> handshakes.
             </h2>
-            <p className="mt-7 text-[18px] lg:text-[19px] text-white/85 leading-[1.7] max-w-2xl">
+            <p className="mt-5 sm:mt-7 text-[16px] sm:text-[18px] lg:text-[19px] text-white/85 leading-[1.6] sm:leading-[1.7] max-w-2xl">
               Unlike out-of-state call centers, we sit right here on Highway 149. We answer our own phones. We know Simpson General and the local networks. We sit down face to face and review your policies every year — because that's what neighbors do.
             </p>
-            <div className="mt-10 grid grid-cols-3 gap-3 sm:gap-4 max-w-xl">
+
+            {/* Mobile: clean inline stats. Desktop: full StatTile grid */}
+            <div className="mt-8 sm:hidden divide-y divide-white/15 border-y border-white/15">
+              {[
+                { v: "100%", l: "Free to you" },
+                { v: "20+", l: "Carriers shopped" },
+                { v: "1:1", l: "Face-to-face" },
+              ].map((s) => (
+                <div key={s.l} className="flex items-baseline justify-between py-3.5">
+                  <span className="display text-[34px] leading-none text-accent">{s.v}</span>
+                  <span className="text-[13px] uppercase tracking-[0.16em] text-white/80">{s.l}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 hidden sm:grid grid-cols-3 gap-4 max-w-xl">
               <StatTile value="100%" label="Free to you" tone="cream" />
               <StatTile value="20+" label="Carriers shopped" tone="cream" />
               <StatTile value="1:1" label="Face-to-face" tone="cream" />
             </div>
-            <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
+
+            <div className="mt-8 sm:mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
               <Link to="/about" className="btn-base btn-gold">About our agency</Link>
-              <span className="font-script text-accent text-[28px] leading-none">— from your neighbors in Magee</span>
+              <span className="font-script text-accent text-[24px] sm:text-[28px] leading-none">— from your neighbors in Magee</span>
             </div>
           </div>
-          <div className="relative">
-            <Polaroid src={storefront} alt="Wood Insurance Agency office on Highway 149 in Magee, MS at golden hour" caption="Come on by." rotate={-3} className="max-w-[440px] mx-auto" />
+          <div className="relative mt-2 lg:mt-0">
+            <Polaroid src={storefront} alt="Wood Insurance Agency office on Highway 149 in Magee, MS at golden hour" caption="Come on by." rotate={-3} className="max-w-[300px] sm:max-w-[440px] mx-auto" />
           </div>
         </div>
       </section>
