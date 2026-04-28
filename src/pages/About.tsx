@@ -6,9 +6,9 @@ import office1 from "@/assets/office-waiting.jpg";
 import office2 from "@/assets/office-desk.jpg";
 
 const STEPS = [
-  { n: "01", title: "I Listen First.", body: "Before I ever recommend a plan, I take the time to understand your situation. Your doctors. Your medications. Your budget. Your goals. Every client is different, and your coverage should reflect that." },
-  { n: "02", title: "I Shop for You.", body: "I have access to plans from dozens of top-rated carriers. I compare them side by side and bring you the best options, explained in plain English. No jargon, no confusion." },
-  { n: "03", title: "I Stay With You.", body: "My job does not end when you enroll. I am available year-round to answer questions, help with claims, and review your coverage every year to make sure you are still getting the best deal." },
+  { n: "01", title: "We Listen First.", body: "Before we ever recommend a plan, we take the time to understand your situation. Your doctors. Your medications. Your budget. Your goals. Every client is different, and your coverage should reflect that." },
+  { n: "02", title: "We Shop for You.", body: "Our team has access to plans from dozens of top-rated carriers. We compare them side by side and bring you the best options, explained in plain English. No jargon, no confusion." },
+  { n: "03", title: "We Stay With You.", body: "Our job does not end when you enroll. We are available year-round to answer questions, help with claims, and review your coverage every year to make sure you are still getting the best deal." },
 ];
 
 const About = () => {
