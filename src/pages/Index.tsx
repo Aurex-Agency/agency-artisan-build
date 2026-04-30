@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Star, ArrowRight, HeartPulse, ShieldCheck, Leaf, Award, MapPin, Users, Quote } from "lucide-react";
+import { Phone, Star, ArrowRight, ShieldCheck, FileText, Pill, Award, MapPin, Users, Quote, Calendar, Clock, Stethoscope, HeartHandshake } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -8,19 +8,36 @@ import { SectionHeading } from "@/components/brand/SectionHeading";
 import { TopoBackground } from "@/components/brand/TopoBackground";
 import { StatTile } from "@/components/brand/StatTile";
 import { Polaroid } from "@/components/brand/Polaroid";
-import medicarePhoto from "@/assets/photos/medicare-couple-porch.jpg";
-import healthPhoto from "@/assets/photos/health-family-kitchen.jpg";
-import lifePhoto from "@/assets/photos/life-grandparent-garden.jpg";
 import portrait from "@/assets/photos/office-hero.jpg";
 import storefront from "@/assets/photos/office-reception.jpg";
-import handshake from "@/assets/photos/office-desk.jpg";
 
 const CARRIERS = ["Humana", "Aetna", "UnitedHealthcare", "Cigna", "Mutual of Omaha", "Anthem", "Wellcare", "Blue Cross"];
 
-const COVERAGE = [
-  { icon: HeartPulse, label: "Medicare", title: "Turning 65 soon?", body: "We sit down with you, review your doctors and medications, and compare top-rated carriers. Completely free.", href: "/medicare", photo: medicarePhoto, alt: "Older couple reviewing Medicare paperwork on a Mississippi front porch" },
-  { icon: ShieldCheck, label: "Health", title: "Coverage that fits.", body: "ACA, individual, family, short-term. We shop multiple carriers to find a plan you can actually afford.", href: "/health-insurance", photo: healthPhoto, alt: "Multigenerational Southern family making biscuits together in a sunny kitchen" },
-  { icon: Leaf, label: "Life", title: "Look after your people.", body: "Term, whole life, and final expense policies built around your family, without the hard sell.", href: "/life-insurance", photo: lifePhoto, alt: "Grandparent and grandchild planting a tomato seedling together in a garden" },
+const MEDICARE_OPTIONS = [
+  {
+    icon: ShieldCheck,
+    label: "Part C",
+    title: "Medicare Advantage",
+    body: "Combines your hospital, medical, and often prescription drug coverage into one plan, frequently with extra benefits like dental and vision.",
+    cta: "Explore Advantage Plans",
+    href: "/medicare#advantage",
+  },
+  {
+    icon: FileText,
+    label: "Medigap",
+    title: "Medicare Supplement",
+    body: "Helps pay some of the healthcare costs that Original Medicare does not cover, like copayments, coinsurance, and deductibles.",
+    cta: "Explore Supplements",
+    href: "/medicare#supplement",
+  },
+  {
+    icon: Pill,
+    label: "Part D",
+    title: "Prescription Drug Coverage",
+    body: "Helps cover the cost of your prescription medications. We will review your current prescriptions to find the most cost-effective plan.",
+    cta: "Review Drug Plans",
+    href: "/medicare#partd",
+  },
 ];
 
 const REVIEWS = [
@@ -44,21 +61,19 @@ const Index = () => {
         <TopoBackground className="text-primary" opacity={0.05} />
         <div className="container-wide grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-14 items-center pt-10 pb-14 lg:pt-20 lg:pb-24 relative">
           <div>
-            <span className="eyebrow">Independent · Local · Free to You</span>
-            <h1 className="display animate-hero-rise mt-4 sm:mt-5 text-[38px] sm:text-[58px] lg:text-[72px] xl:text-[82px] leading-[1] sm:leading-[0.98] tracking-[-0.035em] text-primary text-balance">
-              Insurance you can <em className="italic text-secondary-deep">trust</em>,
-              <br />
-              from neighbors you know.
+            <span className="eyebrow">Local Medicare Expert · Magee, MS</span>
+            <h1 className="display animate-hero-rise mt-4 sm:mt-5 text-[36px] sm:text-[54px] lg:text-[66px] xl:text-[74px] leading-[1] sm:leading-[0.98] tracking-[-0.035em] text-primary text-balance">
+              Speak with a local <em className="italic text-secondary-deep">Medicare expert</em> in Magee, MS.
             </h1>
             <p className="animate-hero-rise mt-5 sm:mt-7 text-[17px] sm:text-[19px] lg:text-[20px] text-ink/80 max-w-xl leading-[1.55] sm:leading-[1.6]" style={{ animationDelay: "60ms" }}>
-              Honest, sit-down guidance for your <span className="font-display italic">Medicare</span>, <span className="font-display italic">Health</span>, and <span className="font-display italic">Life</span> insurance, right here in Magee, Mississippi.
+              Turning 65? Confused by the alphabet soup of Medicare? Get a FREE, no-obligation Medicare Plan Review from your local independent agent. We shop over 20 top-rated carriers so you do not have to.
             </p>
 
             <div className="animate-hero-rise mt-7 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4" style={{ animationDelay: "120ms" }}>
-              <a href="tel:6013972982" className="btn-base btn-gold">
-                <Phone className="w-5 h-5" /> (601) 397-2982
-              </a>
-              <a href="#coverage" className="btn-base btn-outline-navy">Explore coverage</a>
+              <Link to="/contact" className="btn-base btn-gold">
+                Get Your Free Medicare Review
+              </Link>
+              <Link to="/medicare" className="btn-base btn-outline-navy">Learn About Medicare 101</Link>
             </div>
 
             {/* Trust row: rating + badges */}
@@ -128,34 +143,112 @@ const Index = () => {
         </div>
       </section>
 
-      {/* COVERAGE */}
-      <section id="coverage" className="relative bg-background py-20 lg:py-28">
+      {/* MEDICARE OPTIONS */}
+      <section id="medicare-options" className="relative bg-background py-20 lg:py-28">
         <div className="container-wide">
           <SectionHeading
-            eyebrow="What we do"
-            title="Three branches. One trusted neighbor."
-            underlinedWord="One"
-            intro="Each branch of coverage handled by people who actually know your name."
+            eyebrow="Your Medicare Options"
+            title="The Alphabet Soup of Medicare, Explained."
+            underlinedWord="Explained"
+            intro="Three plan types, broken down in plain English by your local independent agent."
           />
-          <div className="mt-12 lg:mt-16 grid lg:grid-cols-3 gap-7">
-            {COVERAGE.map(({ icon: Icon, label, title, body, href, photo, alt }, i) => (
-              <article key={label} className={`group relative bg-cream rounded-2xl overflow-hidden flex flex-col shadow-card hover:shadow-elevated transition-shadow ${i % 2 ? "" : "lg:translate-y-3"}`}>
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={photo} alt={alt} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-cream text-primary text-[12px] font-semibold uppercase tracking-[0.18em] shadow-sm">
-                    <Icon className="w-4 h-4 text-secondary" /> {label}
+          <div className="mt-12 lg:mt-16 grid md:grid-cols-3 gap-7">
+            {MEDICARE_OPTIONS.map(({ icon: Icon, label, title, body, cta, href }) => (
+              <article key={title} className="group relative bg-cream rounded-2xl overflow-hidden flex flex-col shadow-card hover:shadow-elevated transition-shadow border border-cream-deep">
+                <div className="p-8 lg:p-9 flex flex-col flex-1">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+                    <Icon className="w-7 h-7 text-primary" />
                   </div>
-                </div>
-                <div className="p-7 lg:p-8 flex flex-col flex-1">
-                  <h3 className="display text-[26px] sm:text-[30px] leading-[1.05] text-primary">{title}</h3>
-                  <p className="mt-4 text-[17px] text-ink/80 flex-1">{body}</p>
-                  <Link to={href} className="mt-6 inline-flex items-center gap-2 font-semibold text-primary group/link">
-                    Learn more
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-secondary">{label}</span>
+                  <h3 className="display text-[26px] sm:text-[30px] leading-[1.1] text-primary mt-2">{title}</h3>
+                  <p className="mt-4 text-[17px] text-ink/80 flex-1 leading-[1.6]">{body}</p>
+                  <Link to={href} className="mt-7 inline-flex items-center justify-center gap-2 btn-base btn-outline-navy !min-h-[46px] !text-[14px] !px-5">
+                    {cta}
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TURNING 65 URGENCY */}
+      <section className="relative bg-primary-dark text-white overflow-hidden">
+        <TopoBackground className="text-white" opacity={0.07} />
+        <div className="container-wide py-16 lg:py-24 relative grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 items-center">
+          <div>
+            <span className="eyebrow eyebrow-gold">Turning 65?</span>
+            <h2 className="display mt-4 text-[32px] sm:text-[42px] lg:text-[52px] leading-[1.05] text-white tracking-[-0.02em]">
+              Turning 65 Soon?
+              <br />
+              <em className="italic text-accent">Do Not Miss Your Window.</em>
+            </h2>
+            <p className="mt-6 text-[17px] sm:text-[19px] text-white/85 leading-[1.65] max-w-2xl">
+              You have a 7-month Initial Enrollment Period to sign up for Medicare without penalties (3 months before your birthday month, the month of, and 3 months after). Let us handle the paperwork and compare plans from top carriers like Humana, Aetna, and UnitedHealthcare for you. Our help is 100% free.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link to="/contact" className="btn-base btn-gold">
+                <Calendar className="w-5 h-5" /> Schedule Your Turning 65 Consultation
+              </Link>
+              <a href="tel:6013972982" className="btn-base btn-outline-white">
+                <Phone className="w-5 h-5" /> (601) 397-2982
+              </a>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+            {[
+              { v: "3 mo", l: "Before birthday" },
+              { v: "1 mo", l: "Of birthday" },
+              { v: "3 mo", l: "After birthday" },
+            ].map((s) => (
+              <div key={s.l} className="bg-white/5 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-4 flex items-center justify-between">
+                <div>
+                  <div className="display text-[34px] leading-none text-accent">{s.v}</div>
+                  <div className="text-[12px] uppercase tracking-[0.18em] text-white/75 mt-1">{s.l}</div>
+                </div>
+                <Clock className="w-7 h-7 text-white/40" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HEALTH & LIFE — secondary */}
+      <section className="bg-background py-16 lg:py-20">
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="eyebrow">Beyond Medicare</span>
+            <h2 className="display mt-3 text-[28px] sm:text-[36px] text-primary leading-tight">
+              Other Ways We Protect Your Family
+            </h2>
+          </div>
+          <div className="mt-10 grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+            <div className="bg-cream border border-cream-deep rounded-2xl p-7 lg:p-8 flex flex-col">
+              <div className="flex items-center gap-3">
+                <Stethoscope className="w-6 h-6 text-secondary" />
+                <h3 className="display text-[22px] text-primary">Health Insurance</h3>
+              </div>
+              <p className="mt-4 text-[16px] text-ink/80 leading-[1.6] flex-1">
+                Need coverage before you turn 65? We shop the ACA Marketplace and private carriers to find affordable individual and family health plans.
+              </p>
+              <Link to="/health-insurance" className="mt-5 inline-flex items-center gap-2 font-semibold text-primary text-[15px] hover:text-primary-dark">
+                Explore health plans <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="bg-cream border border-cream-deep rounded-2xl p-7 lg:p-8 flex flex-col">
+              <div className="flex items-center gap-3">
+                <HeartHandshake className="w-6 h-6 text-secondary" />
+                <h3 className="display text-[22px] text-primary">Life Insurance</h3>
+              </div>
+              <p className="mt-4 text-[16px] text-ink/80 leading-[1.6] flex-1">
+                Protect the people who depend on you. We offer term, whole life, and final expense policies tailored to your budget, without the hard sell.
+              </p>
+              <Link to="/life-insurance" className="mt-5 inline-flex items-center gap-2 font-semibold text-primary text-[15px] hover:text-primary-dark">
+                Explore life policies <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -254,28 +347,53 @@ const Index = () => {
       </section>
 
       {/* QUOTE */}
-      <section className="bg-background">
-        <div className="grid lg:grid-cols-[5fr_6fr]">
-          <div className="relative bg-canopy text-white p-6 sm:p-10 lg:p-16 flex flex-col justify-center overflow-hidden">
-            <div aria-hidden className="absolute inset-0 leaf-pattern opacity-20" />
-            <div className="relative">
-              <span className="eyebrow eyebrow-gold">Let's talk</span>
-              <h2 className="display mt-4 text-[34px] sm:text-[42px] text-white leading-[1.05]">
-                We'll run the numbers.
-                <br />
-                <em className="italic text-accent">You decide.</em>
-              </h2>
-              <p className="mt-6 text-[18px] text-white/90 max-w-md">Drop your details, or just call. No obligation, ever.</p>
-              <a href="tel:6013972982" className="mt-7 inline-flex items-center gap-3 font-display text-accent text-[28px] sm:text-[32px] font-bold hover:text-accent-dark transition-colors">
-                <Phone className="w-7 h-7" /> (601) 397-2982
-              </a>
-              <p className="mt-5 text-white/70">Mon to Fri · 9:00 AM to 5:00 PM</p>
-              <img src={handshake} alt="" loading="lazy" className="mt-10 w-full max-w-md aspect-[3/2] object-cover rounded-sm shadow-polaroid border-[6px] border-white sm:[transform:rotate(-2deg)]" />
-            </div>
+      <section className="bg-cream py-16 lg:py-24">
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="eyebrow">Let's talk</span>
+            <h2 className="display mt-3 text-[32px] sm:text-[44px] lg:text-[52px] text-primary leading-[1.05]">
+              Speak to a Licensed Insurance Agent Today!
+            </h2>
+            <p className="mt-5 text-[18px] sm:text-[19px] text-ink/80">
+              Get your free, no-obligation Medicare consultation.
+            </p>
           </div>
-          <div className="bg-cream p-6 sm:p-8 lg:p-16">
-            <h3 className="display text-[28px] sm:text-[32px] text-primary mb-7 leading-tight">Request a free quote</h3>
-            <QuoteForm />
+
+          <div className="mt-10 grid md:grid-cols-3 gap-5 lg:gap-6 max-w-5xl mx-auto">
+            <a href="tel:6013972982" className="group bg-white rounded-2xl p-6 lg:p-7 shadow-card border border-cream-deep hover:shadow-elevated hover:-translate-y-0.5 transition-all flex items-center gap-4">
+              <div className="shrink-0 w-14 h-14 rounded-full bg-accent/15 flex items-center justify-center group-hover:bg-accent/25 transition-colors">
+                <Phone className="w-7 h-7 text-accent-dark" />
+              </div>
+              <div className="leading-tight">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-ink/60">Call Us</div>
+                <div className="font-display text-[20px] text-primary mt-1">(601) 397-2982</div>
+              </div>
+            </a>
+            <Link to="/contact" className="group bg-white rounded-2xl p-6 lg:p-7 shadow-card border border-cream-deep hover:shadow-elevated hover:-translate-y-0.5 transition-all flex items-center gap-4">
+              <div className="shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                <Calendar className="w-7 h-7 text-primary" />
+              </div>
+              <div className="leading-tight">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-ink/60">Book a Time</div>
+                <div className="font-display text-[20px] text-primary mt-1">Schedule an Appointment</div>
+              </div>
+            </Link>
+            <a href="https://www.google.com/maps?q=398+Simpson+Hwy+149,+Magee,+MS+39111" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-2xl p-6 lg:p-7 shadow-card border border-cream-deep hover:shadow-elevated hover:-translate-y-0.5 transition-all flex items-center gap-4">
+              <div className="shrink-0 w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/15 transition-colors">
+                <MapPin className="w-7 h-7 text-secondary" />
+              </div>
+              <div className="leading-tight">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-ink/60">Stop By</div>
+                <div className="font-display text-[20px] text-primary mt-1">Visit Us on Hwy 149</div>
+              </div>
+            </a>
+          </div>
+
+          <div className="mt-12 max-w-3xl mx-auto bg-white rounded-2xl shadow-card border border-cream-deep p-6 sm:p-8 lg:p-10">
+            <h3 className="display text-[26px] sm:text-[30px] text-primary mb-6 leading-tight text-center">
+              Request a free quote
+            </h3>
+            <QuoteForm variant="extended" submitLabel="Request My Free Medicare Review" />
           </div>
         </div>
       </section>
