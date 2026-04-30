@@ -9,6 +9,7 @@ import Index from "./pages/Index.tsx";
 import Medicare from "./pages/Medicare.tsx";
 import HealthInsurance from "./pages/HealthInsurance.tsx";
 import LifeInsurance from "./pages/LifeInsurance.tsx";
+import Retirement from "./pages/Retirement.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/medicare" element={<Medicare />} />
             <Route path="/health-insurance" element={<HealthInsurance />} />
             <Route path="/life-insurance" element={<LifeInsurance />} />
+            <Route path="/retirement" element={<Retirement />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -9,6 +9,7 @@ const NAV = [
   { to: "/medicare", label: "Medicare 101" },
   { to: "/medicare#advantage", label: "Medicare Advantage" },
   { to: "/medicare#supplement", label: "Medicare Supplement" },
+  { to: "/retirement", label: "Retirement & Annuities" },
   { to: "/health-insurance", label: "Health & Life" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
