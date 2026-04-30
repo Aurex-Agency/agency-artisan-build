@@ -11,8 +11,8 @@ export const QuoteForm = ({ variant = "default", submitLabel = "Request My Free 
   const [submitting, setSubmitting] = useState(false);
 
   const options = variant === "extended"
-    ? ["Medicare Advantage", "Medicare Supplement", "Health Insurance (ACA)", "Health Insurance (Individual/Family)", "Life Insurance", "Final Expense Insurance", "Not Sure Yet"]
-    : ["Medicare", "Health Insurance", "Life Insurance", "Not Sure Yet"];
+    ? ["Medicare Advantage", "Medicare Supplement", "Prescription Drug Coverage (Part D)", "Turning 65 Consultation", "Health Insurance (ACA)", "Health Insurance (Individual/Family)", "Life Insurance", "Final Expense Insurance", "Not Sure Yet"]
+    : ["Medicare Advantage", "Medicare Supplement", "Turning 65 Consultation", "Health Insurance", "Life Insurance", "Not Sure Yet"];
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -48,8 +48,7 @@ export const QuoteForm = ({ variant = "default", submitLabel = "Request My Free 
       </div>
       <div>
         <label htmlFor="qf-topic" className="block text-sm font-semibold mb-2 text-dark">What do you need help with?</label>
-        <select id="qf-topic" name="topic" required className={fieldClass + " appearance-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22%23374151%22><path stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%222%22 d=%22M19 9l-7 7-7-7%22/></svg>')] bg-no-repeat bg-[length:1.25rem] bg-[position:right_1rem_center] pr-12"} defaultValue="">
-          <option value="" disabled>Select an option</option>
+        <select id="qf-topic" name="topic" required className={fieldClass + " appearance-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22%23374151%22><path stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%222%22 d=%22M19 9l-7 7-7-7%22/></svg>')] bg-no-repeat bg-[length:1.25rem] bg-[position:right_1rem_center] pr-12"} defaultValue="Medicare Advantage">
           {options.map((o) => <option key={o}>{o}</option>)}
         </select>
       </div>
