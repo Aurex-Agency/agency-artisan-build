@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Star, ArrowRight, ShieldCheck, FileText, Pill, Award, MapPin, Users, Quote, Calendar, Clock, Stethoscope, HeartHandshake } from "lucide-react";
+import { Phone, Star, ArrowRight, ShieldCheck, FileText, Pill, Award, MapPin, Users, Quote, Calendar, Clock, Stethoscope, HeartHandshake, PiggyBank } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -61,9 +61,9 @@ const Index = () => {
         <TopoBackground className="text-primary" opacity={0.05} />
         <div className="container-wide grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-14 items-center pt-10 pb-14 lg:pt-20 lg:pb-24 relative">
           <div>
-            <span className="eyebrow">Local Medicare Expert · Magee, MS</span>
+            <span className="eyebrow">Local Medicare Expert · MS, AL, TN, LA</span>
             <h1 className="display animate-hero-rise mt-4 sm:mt-5 text-[36px] sm:text-[54px] lg:text-[66px] xl:text-[74px] leading-[1] sm:leading-[0.98] tracking-[-0.035em] text-primary text-balance">
-              Speak with a local <em className="italic text-secondary-deep">Medicare expert</em> in Magee, MS.
+              Speak with a <em className="italic text-secondary-deep">Medicare expert</em> licensed in MS, AL, TN, & LA.
             </h1>
             <p className="animate-hero-rise mt-5 sm:mt-7 text-[17px] sm:text-[19px] lg:text-[20px] text-ink/80 max-w-xl leading-[1.55] sm:leading-[1.6]" style={{ animationDelay: "60ms" }}>
               Turning 65? Confused by the alphabet soup of Medicare? Get a FREE, no-obligation Medicare Plan Review from your local independent agent. We shop over 20 top-rated carriers so you do not have to.
@@ -84,7 +84,7 @@ const Index = () => {
               </div>
               <span aria-hidden className="hidden sm:inline-block w-px h-5 bg-ink/15" />
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-ink/70">
-                <span className="inline-flex items-center gap-1.5"><Award className="w-4 h-4 text-secondary" /> Licensed in MS</span>
+                <span className="inline-flex items-center gap-1.5"><Award className="w-4 h-4 text-secondary" /> Licensed in MS, AL, TN, LA</span>
                 <span className="inline-flex items-center gap-1.5"><MapPin className="w-4 h-4 text-secondary" /> Magee, MS</span>
                 <span className="inline-flex items-center gap-1.5"><Users className="w-4 h-4 text-secondary" /> Independent Agents</span>
               </div>
@@ -224,7 +224,7 @@ const Index = () => {
               Other Ways We Protect Your Family
             </h2>
           </div>
-          <div className="mt-10 grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+          <div className="mt-10 grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             <div className="bg-cream border border-cream-deep rounded-2xl p-7 lg:p-8 flex flex-col">
               <div className="flex items-center gap-3">
                 <Stethoscope className="w-6 h-6 text-secondary" />
@@ -247,6 +247,18 @@ const Index = () => {
               </p>
               <Link to="/life-insurance" className="mt-5 inline-flex items-center gap-2 font-semibold text-primary text-[15px] hover:text-primary-dark">
                 Explore life policies <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="bg-cream border border-cream-deep rounded-2xl p-7 lg:p-8 flex flex-col">
+              <div className="flex items-center gap-3">
+                <PiggyBank className="w-6 h-6 text-secondary" />
+                <h3 className="display text-[22px] text-primary">Retirement & Annuities</h3>
+              </div>
+              <p className="mt-4 text-[16px] text-ink/80 leading-[1.6] flex-1">
+                Protect your nest egg and guarantee your retirement income with our fixed annuities and rollover strategies.
+              </p>
+              <Link to="/retirement" className="mt-5 inline-flex items-center gap-2 font-semibold text-primary text-[15px] hover:text-primary-dark">
+                Explore Retirement Options <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

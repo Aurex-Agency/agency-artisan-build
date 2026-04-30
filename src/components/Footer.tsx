@@ -46,14 +46,14 @@ export const Footer = () => {
 
         <div>
           <h2 className="text-accent text-sm uppercase tracking-[0.18em] font-semibold mb-5">Proudly Serving</h2>
-          <ul className="space-y-2 text-white/85">
-            <li>Magee, MS</li>
-            <li>Mendenhall, MS</li>
-            <li>Braxton, MS</li>
-            <li>D'Lo, MS</li>
-            <li>Richland, MS</li>
-            <li>All of Simpson County</li>
-            <li>All of Mississippi</li>
+          <p className="text-white/85 leading-[1.7]">
+            Proudly serving clients across Mississippi, Alabama, Tennessee, and Louisiana.
+          </p>
+          <ul className="mt-5 space-y-2 text-white/75 text-sm">
+            <li>Mississippi</li>
+            <li>Alabama</li>
+            <li>Tennessee</li>
+            <li>Louisiana</li>
           </ul>
         </div>
       </div>

@@ -39,7 +39,7 @@ const About = () => {
               Rooted in Simpson County. Dedicated to Your Protection.
             </h1>
             <div className="animate-hero-rise mt-6 space-y-4 text-[18px] lg:text-[19px] text-text leading-[1.8]" style={{ animationDelay: "60ms" }}>
-              <p>Hi, I am Cindy Woods. I founded Wood Insurance Agency right here in Magee, Mississippi to help my neighbors find the right coverage without the confusion, and we have been growing as a local team ever since.</p>
+              <p>Hi, I am Cindy Woods. I founded Wood Insurance Agency right here in Magee, Mississippi to help my neighbors find the right coverage without the confusion. While we are based in Magee, I am licensed to help families across Mississippi, Alabama, Tennessee, and Louisiana.</p>
               <p>Whether you are turning 65 and navigating Medicare for the first time, looking for a more affordable health plan, or wanting to protect your family with life insurance, our agency is here to guide you every step of the way.</p>
               <p>Because we are independent, we do not work for one specific insurance company. We work for you. Our team shops dozens of top-rated carriers to find the exact plan that fits your health needs and your budget. Best of all, our services are completely free to you. Insurance companies pay agent commissions, so you never pay a dime for our help.</p>
             </div>
