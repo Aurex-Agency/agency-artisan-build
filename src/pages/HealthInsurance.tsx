@@ -4,6 +4,7 @@ import { Seo } from "@/components/Seo";
 import {
   Check, Stethoscope, Users, HeartPulse, Clock, PiggyBank, Pill, ShieldCheck,
   Calendar, Search, Scale, Rocket, HelpCircle, Award, Phone, FileText, Baby, Briefcase,
+  Ribbon, Activity,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -14,6 +15,7 @@ const INCLUDED = [
   "Preventive care benefits",
   "Mental health services",
   "Emergency and hospital coverage",
+  "Cancer, heart attack, and stroke plans",
 ];
 
 const QUICK_FACTS = [
@@ -100,6 +102,7 @@ const SERVICE_BENEFITS = [
   "Preventive care benefits",
   "Mental health and substance abuse coverage",
   "Family coverage options",
+  "Critical illness coverage (cancer, heart attack, stroke)",
 ];
 
 const LIFE_EVENTS = [
@@ -133,6 +136,14 @@ const FAQS = [
   {
     q: "How much does your service cost?",
     a: "Our health insurance services are completely free to you. We are paid by the carriers when you choose a plan, so our guidance never costs you out of pocket.",
+  },
+  {
+    q: "Do I need a critical illness plan if I already have health insurance?",
+    a: "Major-medical plans pay doctors and hospitals, but they do not cover everyday bills. A cancer, heart attack, or stroke diagnosis often brings deductibles, time off work, travel for treatment, and household expenses that pile up fast. A critical illness plan pays a lump-sum cash benefit directly to you so you can focus on recovery instead of finances.",
+  },
+  {
+    q: "How are cancer, heart attack, and stroke benefits paid?",
+    a: "Once a covered diagnosis is verified by your physician, the carrier pays a lump-sum cash benefit directly to you, the policyholder. There is no network, no itemized claims, and no rules on how the money is spent. Use it for treatment, bills, travel, or anything your family needs.",
   },
 ];
 
@@ -236,8 +247,103 @@ const HealthInsurance = () => {
         </div>
       </section>
 
-      {/* How We Help You Choose */}
+      {/* Critical Illness Coverage */}
       <section className="py-16 lg:py-20 bg-surface">
+        <div className="container-wide">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block text-accent-dark text-[12px] font-semibold uppercase tracking-wider mb-2">Critical Illness Plans</span>
+            <h2 className="text-[32px] sm:text-[40px] font-bold text-ink">Cancer, Heart Attack, and Stroke Coverage</h2>
+            <p className="mt-3 text-muted-foreground text-[17px]">
+              Even strong major-medical plans leave gaps. Critical illness policies pay a lump-sum cash benefit on a covered diagnosis so your family can focus on recovery, not bills.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: Ribbon,
+                title: "Cancer Plans",
+                body: "Lump-sum cash on a covered cancer diagnosis, plus benefits that help with treatment, screening, and recovery.",
+                bullets: [
+                  "Lump-sum benefit at first diagnosis",
+                  "Chemo, radiation, and targeted therapy support",
+                  "Wellness and screening benefits",
+                  "Optional return-of-premium riders",
+                ],
+              },
+              {
+                icon: HeartPulse,
+                title: "Heart Attack Plans",
+                body: "Cash benefits paid directly to you after a covered heart attack, bypass surgery, or angioplasty.",
+                bullets: [
+                  "Lump-sum payout on first diagnosis",
+                  "Bypass and angioplasty benefits",
+                  "Recovery and cardiac rehab support",
+                  "No network restrictions",
+                ],
+              },
+              {
+                icon: Activity,
+                title: "Stroke Plans",
+                body: "Financial protection after a covered stroke, so you can focus on rehab and getting back to your life.",
+                bullets: [
+                  "Covers ischemic and hemorrhagic strokes",
+                  "Lump-sum cash paid to you",
+                  "Helps fund rehab and home modifications",
+                  "Replaces lost income during recovery",
+                ],
+              },
+            ].map((p) => (
+              <div key={p.title} className="bg-white rounded-2xl p-7 shadow-card border-t-4 border-secondary border-x border-b border-border/60 flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center mb-4">
+                  <p.icon className="w-6 h-6 text-secondary" aria-hidden />
+                </div>
+                <h3 className="text-[18px] font-bold text-ink">{p.title}</h3>
+                <p className="mt-2 text-[14px] text-muted-foreground leading-relaxed">{p.body}</p>
+                <ul className="mt-4 space-y-2">
+                  {p.bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-2 text-[14px] text-ink">
+                      <Check className="w-4 h-4 text-secondary mt-1 shrink-0" aria-hidden />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 bg-white rounded-2xl p-7 lg:p-9 shadow-card border border-border/60 grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-[22px] font-bold text-ink">What the cash benefit can cover</h3>
+              <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">
+                Once a diagnosis is verified, the benefit is paid directly to you. There are no rules on how to spend it.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link to="/contact" className="btn-base btn-navy">Get a Critical Illness Quote</Link>
+                <a href="tel:6014397230" className="btn-base btn-outline-navy">Call (601) 439-7230</a>
+              </div>
+            </div>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {[
+                "Deductibles, copays, and coinsurance",
+                "Lost wages during recovery",
+                "Travel and lodging for treatment",
+                "Experimental or out-of-network care",
+                "Mortgage, rent, and household bills",
+                "Childcare and family support",
+              ].map((b) => (
+                <li key={b} className="flex items-start gap-2 text-[14px] text-ink">
+                  <Check className="w-4 h-4 text-secondary mt-1 shrink-0" aria-hidden />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Help You Choose */}
+      <section className="py-16 lg:py-20 bg-white">
         <div className="container-wide text-center max-w-3xl mx-auto mb-12">
           <span className="inline-block text-secondary text-[12px] font-semibold uppercase tracking-wider mb-2">Our Process</span>
           <h2 className="text-[32px] sm:text-[40px] font-bold text-ink">How We Help You Choose</h2>
