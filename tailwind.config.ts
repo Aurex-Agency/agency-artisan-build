@@ -8,9 +8,7 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
       colors: {
@@ -19,9 +17,9 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        cream: "hsl(var(--cream))",
-        "cream-deep": "hsl(var(--cream-deep))",
+        surface: "hsl(var(--surface))",
         ink: "hsl(var(--ink))",
+        "card-blue": "hsl(var(--card-blue))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -30,7 +28,6 @@ export default {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
-          deep: "hsl(var(--secondary-deep))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -44,7 +41,6 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
           dark: "hsl(var(--accent-dark))",
-          soft: "hsl(var(--accent-soft))",
         },
         dark: "hsl(var(--dark))",
         text: "hsl(var(--text))",
@@ -68,43 +64,22 @@ export default {
         },
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
-        sans: ['"Inter Tight"', 'system-ui', 'sans-serif'],
-        script: ['Caveat', '"Brush Script MT"', 'cursive'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
+        soft: 'var(--shadow-soft)',
         card: 'var(--shadow-card)',
-        elevated: 'var(--shadow-elevated)',
+        float: 'var(--shadow-float)',
         cta: 'var(--shadow-cta)',
-        polaroid: 'var(--shadow-polaroid)',
-      },
-      backgroundImage: {
-        canopy: 'var(--gradient-canopy)',
-        sun: 'var(--gradient-sun)',
-        cream: 'var(--gradient-cream)',
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
-        },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
-        },
+        "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
+        "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
