@@ -1,84 +1,62 @@
-import { Phone, MapPin, Clock } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Seo } from "@/components/Seo";
 import { QuoteForm } from "@/components/QuoteForm";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
     <Layout>
-      <Seo
-        title="Contact Wood Insurance Agency | Magee, MS | (601) 397-2982"
-        description="Contact Wood Insurance Agency in Magee, MS. Located at 398 Simpson Hwy 149, Ste A. Call (601) 397-2982 or request a free quote online. Serving all of Mississippi."
-        keywords="contact Wood Insurance Agency Magee MS, insurance agent phone number Magee Mississippi, free insurance quote Magee MS"
-        path="/contact"
-      />
+      <Seo title="Contact Wood Insurance Agency" description="Get in touch with Cindy Wood. Phone, email, or visit our Magee, MS office. Serving MS, AL, TN, and LA." />
 
-      {/* HERO */}
       <section className="bg-primary text-white">
-        <div className="container-wide py-20 lg:py-28 text-center">
-          <h1 className="animate-hero-rise text-[36px] sm:text-[44px] lg:text-[52px] text-white text-balance">
-            We Are Here When You Need Us.
-          </h1>
-          <p className="animate-hero-rise mt-5 text-[19px] lg:text-[20px] text-white/90 max-w-2xl mx-auto" style={{ animationDelay: "60ms" }}>
-            Call, email, or stop by. We are always happy to help.
+        <div className="container-wide py-14 lg:py-16 max-w-3xl mx-auto text-center">
+          <span className="inline-block bg-accent/15 text-accent text-[12px] font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full">Contact</span>
+          <h1 className="mt-4 text-white text-[40px] sm:text-[48px] font-bold leading-[1.1]">Get in Touch</h1>
+          <p className="mt-4 text-white/85 text-[17px] leading-relaxed">
+            Questions about Medicare, retirement, health, or life insurance? We are here to help.
           </p>
         </div>
       </section>
 
-      {/* DETAILS + FORM */}
-      <section className="bg-background py-16 lg:py-24">
-        <div className="container-wide grid lg:grid-cols-[45fr_55fr] gap-12 lg:gap-16">
-          <div>
-            <h2 className="text-[28px] sm:text-[32px] mb-8">Get in Touch</h2>
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="container-wide grid lg:grid-cols-5 gap-10">
+          <div className="lg:col-span-2 space-y-5">
+            <h2 className="text-[28px] font-bold text-ink">Reach Out</h2>
+            <p className="text-muted-foreground text-[16px]">Call, email, or stop by the office. We respond within one business day.</p>
 
-            <ContactBlock icon={<Phone className="w-6 h-6 text-dark" />} label="Call or Text">
-              <a href="tel:6013972982" className="block text-[26px] sm:text-[30px] font-display font-bold text-primary hover:text-primary-dark transition-colors">
-                (601) 397-2982
-              </a>
-            </ContactBlock>
-
-            <ContactBlock icon={<MapPin className="w-6 h-6 text-dark" />} label="Visit Our Office">
-              <p className="text-[18px] text-text">398 Simpson Hwy 149, Ste A<br />Magee, MS 39111</p>
-            </ContactBlock>
-
-            <ContactBlock icon={<Clock className="w-6 h-6 text-dark" />} label="Office Hours">
-              <p className="text-[18px] text-text">Monday - Friday: 9:00 AM - 5:00 PM<br /><span className="text-muted-foreground">Saturday - Sunday: Closed</span></p>
-            </ContactBlock>
-
-            <div className="mt-10 rounded-xl overflow-hidden border border-border shadow-card">
-              <iframe
-                title="Wood Insurance Agency map"
-                src="https://www.google.com/maps?q=398+Simpson+Hwy+149,+Magee,+MS+39111&output=embed"
-                width="100%"
-                height="320"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full block border-0"
-              />
-              <div className="bg-muted px-4 py-3 text-sm text-text">We are located on Highway 149 in Magee.</div>
-            </div>
+            <ul className="space-y-4 mt-6">
+              {[
+                { icon: Phone, title: "Phone", body: "(601) 397-2982", href: "tel:6013972982" },
+                { icon: Mail, title: "Email", body: "cwood@woodinsurance.agency", href: "mailto:cwood@woodinsurance.agency" },
+                { icon: MapPin, title: "Office", body: "398 Simpson Hwy 149, Ste A\nMagee, MS 39111" },
+                { icon: Clock, title: "Hours", body: "Mon-Fri 9AM-5PM" },
+              ].map((c) => (
+                <li key={c.title} className="flex items-start gap-3">
+                  <span className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <c.icon className="w-5 h-5 text-primary" aria-hidden />
+                  </span>
+                  <div>
+                    <div className="font-semibold text-ink text-[15px]">{c.title}</div>
+                    {c.href ? (
+                      <a href={c.href} className="text-text text-[15px] hover:text-primary whitespace-pre-line break-words">{c.body}</a>
+                    ) : (
+                      <div className="text-text text-[15px] whitespace-pre-line">{c.body}</div>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className="bg-muted rounded-xl p-8 lg:p-10 border border-border">
-            <h2 className="text-[26px] sm:text-[28px] mb-6">Request a Free Quote</h2>
-            <QuoteForm variant="extended" submitLabel="Send My Request" />
+          <div className="lg:col-span-3 bg-white rounded-2xl shadow-float border border-border/60 p-7 lg:p-9">
+            <h2 className="text-[24px] font-bold text-ink">Request a Free Quote</h2>
+            <p className="text-muted-foreground text-[14px] mt-1 mb-5">No obligation, just expert advice.</p>
+            <QuoteForm defaultService="Medicare" />
           </div>
         </div>
       </section>
     </Layout>
   );
 };
-
-const ContactBlock = ({ icon, label, children }: { icon: React.ReactNode; label: string; children: React.ReactNode }) => (
-  <div className="flex items-start gap-5 mb-8">
-    <div className="shrink-0 w-12 h-12 rounded-full bg-accent flex items-center justify-center">
-      {icon}
-    </div>
-    <div>
-      <div className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">{label}</div>
-      <div className="mt-1">{children}</div>
-    </div>
-  </div>
-);
 
 export default Contact;
