@@ -159,7 +159,7 @@ const Retirement = () => {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-base btn-navy">Start Planning</Link>
-              <a href="tel:6013972982" className="btn-base btn-outline-navy">Free Consultation</a>
+              <a href="tel:6014397230" className="btn-base btn-outline-navy">Free Consultation</a>
             </div>
           </div>
           <div className="bg-white rounded-2xl shadow-float p-7 lg:p-8 lg:justify-self-end w-full max-w-md">
@@ -283,7 +283,7 @@ const Retirement = () => {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-base btn-navy">Schedule Consultation</Link>
-              <a href="tel:6013972982" className="btn-base btn-outline-navy">Call (601) 397-2982</a>
+              <a href="tel:6014397230" className="btn-base btn-outline-navy">Call (601) 439-7230</a>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
@@ -378,7 +378,7 @@ const Retirement = () => {
           <p className="mt-3 text-white/80 text-[16px]">Book a no-obligation strategy session with a licensed local advisor today.</p>
           <div className="mt-6 flex flex-wrap gap-3 justify-center">
             <Link to="/contact" className="btn-base btn-gold">Book My Session</Link>
-            <a href="tel:6013972982" className="btn-base btn-outline-white">Call (601) 397-2982</a>
+            <a href="tel:6014397230" className="btn-base btn-outline-white">Call (601) 439-7230</a>
           </div>
         </div>
       </section>

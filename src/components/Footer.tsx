@@ -41,9 +41,9 @@ export const Footer = () => {
               <span>398 Simpson Hwy 149, Ste A<br />Magee, MS 39111</span>
             </li>
             <li>
-              <a href="tel:6013972982" className="flex items-center gap-2.5 hover:text-accent transition-colors">
+              <a href="tel:6014397230" className="flex items-center gap-2.5 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4 text-accent" aria-hidden />
-                <span>(601) 397-2982</span>
+                <span>(601) 439-7230</span>
               </a>
             </li>
             <li>

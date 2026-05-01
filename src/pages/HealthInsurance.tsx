@@ -166,8 +166,8 @@ const HealthInsurance = () => {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-base btn-gold">Get Free Quote</Link>
-              <a href="tel:6013972982" className="btn-base btn-outline-white">
-                <Phone className="w-4 h-4" aria-hidden /> Call (601) 397-2982
+              <a href="tel:6014397230" className="btn-base btn-outline-white">
+                <Phone className="w-4 h-4" aria-hidden /> Call (601) 439-7230
               </a>
             </div>
           </div>
@@ -305,7 +305,7 @@ const HealthInsurance = () => {
             </ul>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-base btn-navy">Schedule Consultation</Link>
-              <a href="tel:6013972982" className="btn-base btn-outline-navy">Call (601) 397-2982</a>
+              <a href="tel:6014397230" className="btn-base btn-outline-navy">Call (601) 439-7230</a>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
@@ -335,7 +335,7 @@ const HealthInsurance = () => {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-base btn-navy">Check My Eligibility</Link>
-              <a href="tel:6013972982" className="btn-base btn-outline-dark">Call (601) 397-2982</a>
+              <a href="tel:6014397230" className="btn-base btn-outline-dark">Call (601) 439-7230</a>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -402,7 +402,7 @@ const HealthInsurance = () => {
           <p className="mt-3 text-white/80 text-[16px]">No pressure, no obligation. Just expert guidance from a local independent agent.</p>
           <div className="mt-6 flex flex-wrap gap-3 justify-center">
             <Link to="/contact" className="btn-base btn-gold">Get Free Quote</Link>
-            <a href="tel:6013972982" className="btn-base btn-outline-white">Call (601) 397-2982</a>
+            <a href="tel:6014397230" className="btn-base btn-outline-white">Call (601) 439-7230</a>
           </div>
         </div>
       </section>

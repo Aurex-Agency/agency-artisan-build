@@ -228,8 +228,8 @@ const Medicare = () => {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-base btn-gold">Get Medicare Quote</Link>
-              <a href="tel:6013972982" className="btn-base btn-outline-white">
-                <Phone className="w-4 h-4" aria-hidden /> Call (601) 397-2982
+              <a href="tel:6014397230" className="btn-base btn-outline-white">
+                <Phone className="w-4 h-4" aria-hidden /> Call (601) 439-7230
               </a>
             </div>
           </div>
@@ -598,7 +598,7 @@ const Medicare = () => {
             </ul>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-base btn-navy">Schedule My Review</Link>
-              <a href="tel:6013972982" className="btn-base btn-outline-navy">Call (601) 397-2982</a>
+              <a href="tel:6014397230" className="btn-base btn-outline-navy">Call (601) 439-7230</a>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
@@ -666,7 +666,7 @@ const Medicare = () => {
           <p className="mt-3 text-white/80 text-[16px]">A free, no-obligation review with a local licensed Medicare expert.</p>
           <div className="mt-6 flex flex-wrap gap-3 justify-center">
             <Link to="/contact" className="btn-base btn-gold">Schedule My Review</Link>
-            <a href="tel:6013972982" className="btn-base btn-outline-white">Call (601) 397-2982</a>
+            <a href="tel:6014397230" className="btn-base btn-outline-white">Call (601) 439-7230</a>
           </div>
         </div>
       </section>
