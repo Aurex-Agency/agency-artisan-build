@@ -1,9 +1,11 @@
 import { FormEvent, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 interface QuoteFormProps {
   defaultService?: string;
   submitLabel?: string;
+  source?: string;
 }
 
 const SERVICES = [
@@ -18,21 +20,48 @@ const SERVICES = [
   "Not Sure Yet",
 ];
 
-export const QuoteForm = ({ defaultService = "Medicare", submitLabel = "Get My Free Quote" }: QuoteFormProps) => {
+export const QuoteForm = ({ defaultService = "Medicare", submitLabel = "Get My Free Quote", source = "Quote form" }: QuoteFormProps) => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      (e.target as HTMLFormElement).reset();
+    try {
+      const { error } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "new-lead-notification",
+          idempotencyKey: `quote-${crypto.randomUUID()}`,
+          templateData: {
+            firstName: String(data.get("firstName") ?? ""),
+            lastName: String(data.get("lastName") ?? ""),
+            email: String(data.get("email") ?? ""),
+            phone: String(data.get("phone") ?? ""),
+            service: String(data.get("service") ?? ""),
+            notes: String(data.get("notes") ?? ""),
+            source,
+            submittedAt: new Date().toLocaleString(),
+          },
+        },
+      });
+      if (error) throw error;
+      form.reset();
       toast({
         title: "Thank you, we got it.",
         description: "Our team will be in touch within one business day.",
       });
-    }, 600);
+    } catch (err) {
+      console.error("Quote submit failed", err);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or call (601) 439-7230.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
