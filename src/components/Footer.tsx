@@ -47,9 +47,9 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="mailto:cwood@woodinsurance.agency" className="flex items-center gap-2.5 hover:text-accent transition-colors break-all">
+              <a href="mailto:cindy@woodinsuranceagency.net" className="flex items-center gap-2.5 hover:text-accent transition-colors break-all">
                 <Mail className="w-4 h-4 text-accent shrink-0" aria-hidden />
-                <span>cwood@woodinsurance.agency</span>
+                <span>cindy@woodinsuranceagency.net</span>
               </a>
             </li>
             <li className="flex items-center gap-2.5">
