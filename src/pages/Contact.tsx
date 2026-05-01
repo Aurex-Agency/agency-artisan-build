@@ -29,7 +29,7 @@ const Contact = () => {
                 { icon: Phone, title: "Phone", body: "(601) 439-7230", href: "tel:6014397230" },
                 { icon: Mail, title: "Email", body: "cindy@woodinsuranceagency.net", href: "mailto:cindy@woodinsuranceagency.net" },
                 { icon: MapPin, title: "Office", body: "398 Simpson Hwy 149, Ste A\nMagee, MS 39111" },
-                { icon: Clock, title: "Hours", body: "Mon-Fri 9AM-5PM" },
+                { icon: Clock, title: "Hours", body: "Mon-Fri 8AM-5PM" },
               ].map((c) => (
                 <li key={c.title} className="flex items-start gap-3">
                   <span className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
