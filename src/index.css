@@ -10,16 +10,16 @@
 @layer base {
   :root {
     /* Brand palette */
-    --primary: 222 69% 33%;          /* Navy #1A3A8C */
+    --primary: 222 78% 42%;          /* Royal Blue from logo */
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 222 70% 22%;     /* Deeper navy for utility bar */
+    --primary-dark: 222 80% 28%;     /* Deeper royal blue */
 
-    --secondary: 123 46% 34%;        /* Forest Green #2E7D32 */
+    --secondary: 110 62% 42%;        /* Leaf Green from logo */
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 43 80% 46%;            /* Warm Gold #D4A017 */
-    --accent-foreground: 222 70% 18%;
-    --accent-dark: 38 80% 38%;
+    --accent: 42 92% 52%;            /* Golden Yellow from logo */
+    --accent-foreground: 222 80% 22%;
+    --accent-dark: 38 90% 44%;
 
     --card-blue: 210 80% 56%;        /* Light blue for Life card top */
 
