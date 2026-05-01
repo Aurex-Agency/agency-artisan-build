@@ -4,6 +4,7 @@ import { Seo } from "@/components/Seo";
 import {
   Check, Stethoscope, Users, HeartPulse, Clock, PiggyBank, Pill, ShieldCheck,
   Calendar, Search, Scale, Rocket, HelpCircle, Award, Phone, FileText, Baby, Briefcase,
+  Ribbon, Activity,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -14,6 +15,7 @@ const INCLUDED = [
   "Preventive care benefits",
   "Mental health services",
   "Emergency and hospital coverage",
+  "Cancer, heart attack, and stroke plans",
 ];
 
 const QUICK_FACTS = [
@@ -100,6 +102,7 @@ const SERVICE_BENEFITS = [
   "Preventive care benefits",
   "Mental health and substance abuse coverage",
   "Family coverage options",
+  "Critical illness coverage (cancer, heart attack, stroke)",
 ];
 
 const LIFE_EVENTS = [
@@ -133,6 +136,14 @@ const FAQS = [
   {
     q: "How much does your service cost?",
     a: "Our health insurance services are completely free to you. We are paid by the carriers when you choose a plan, so our guidance never costs you out of pocket.",
+  },
+  {
+    q: "Do I need a critical illness plan if I already have health insurance?",
+    a: "Major-medical plans pay doctors and hospitals, but they do not cover everyday bills. A cancer, heart attack, or stroke diagnosis often brings deductibles, time off work, travel for treatment, and household expenses that pile up fast. A critical illness plan pays a lump-sum cash benefit directly to you so you can focus on recovery instead of finances.",
+  },
+  {
+    q: "How are cancer, heart attack, and stroke benefits paid?",
+    a: "Once a covered diagnosis is verified by your physician, the carrier pays a lump-sum cash benefit directly to you, the policyholder. There is no network, no itemized claims, and no rules on how the money is spent. Use it for treatment, bills, travel, or anything your family needs.",
   },
 ];
 
