@@ -248,7 +248,7 @@ const HealthInsurance = () => {
       </section>
 
       {/* How We Help You Choose */}
-      <section className="py-16 lg:py-20 bg-surface">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="container-wide text-center max-w-3xl mx-auto mb-12">
           <span className="inline-block text-secondary text-[12px] font-semibold uppercase tracking-wider mb-2">Our Process</span>
           <h2 className="text-[32px] sm:text-[40px] font-bold text-ink">How We Help You Choose</h2>
