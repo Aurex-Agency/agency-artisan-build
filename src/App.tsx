@@ -7,7 +7,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import Index from "./pages/Index.tsx";
 import Medicare from "./pages/Medicare.tsx";
-import HealthLife from "./pages/HealthLife.tsx";
+import HealthInsurance from "./pages/HealthInsurance.tsx";
+import LifeInsurance from "./pages/LifeInsurance.tsx";
 import Retirement from "./pages/Retirement.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
@@ -26,8 +27,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/medicare" element={<Medicare />} />
-            <Route path="/health-insurance" element={<HealthLife />} />
-            <Route path="/life-insurance" element={<Navigate to="/health-insurance#life" replace />} />
+            <Route path="/health-insurance" element={<HealthInsurance />} />
+            <Route path="/life-insurance" element={<LifeInsurance />} />
             <Route path="/retirement" element={<Retirement />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

@@ -19,7 +19,7 @@ export const Footer = () => {
             <li><Link to="/medicare" className="hover:text-accent transition-colors">Medicare</Link></li>
             <li><Link to="/retirement" className="hover:text-accent transition-colors">Retirement Planning</Link></li>
             <li><Link to="/health-insurance" className="hover:text-accent transition-colors">Health Insurance</Link></li>
-            <li><Link to="/health-insurance#life" className="hover:text-accent transition-colors">Life Insurance</Link></li>
+            <li><Link to="/life-insurance" className="hover:text-accent transition-colors">Life Insurance</Link></li>
           </ul>
         </div>
 

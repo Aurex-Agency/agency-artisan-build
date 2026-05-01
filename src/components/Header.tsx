@@ -7,7 +7,8 @@ import { UtilityBar } from "./UtilityBar";
 const NAV = [
   { to: "/medicare", label: "Medicare" },
   { to: "/retirement", label: "Retirement Planning" },
-  { to: "/health-insurance", label: "Health & Life Insurance" },
+  { to: "/health-insurance", label: "Health Insurance" },
+  { to: "/life-insurance", label: "Life Insurance" },
   { to: "/about", label: "About Us" },
   { to: "/contact", label: "Contact" },
 ];
