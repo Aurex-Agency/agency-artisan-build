@@ -20,7 +20,7 @@ const QUICK_FACTS = [
   { label: "Avg. Annual Savings", value: "$300+" },
   { label: "Carriers Compared", value: "20+" },
   { label: "Claims Support", value: "24/7" },
-  { label: "Local Office", value: "Brandon, MS" },
+  { label: "Local Office", value: "Magee, MS" },
 ];
 
 const COVERAGE = [
@@ -293,7 +293,7 @@ const HealthInsurance = () => {
               Independent, Local, and On Your Side
             </h2>
             <p className="mt-4 text-muted-foreground text-[17px] leading-relaxed">
-              Cindy Wood has spent two decades helping families in Brandon and across the South find health coverage that actually fits. Because we are independent, we are not tied to any single carrier and we are never in a hurry to sell you something. We are in this for the long haul.
+              Cindy Wood has spent two decades helping families in Magee and across the South find health coverage that actually fits. Because we are independent, we are not tied to any single carrier and we are never in a hurry to sell you something. We are in this for the long haul.
             </p>
             <ul className="mt-6 grid sm:grid-cols-2 gap-3">
               {SERVICE_BENEFITS.map((b) => (
