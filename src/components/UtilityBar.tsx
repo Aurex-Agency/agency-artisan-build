@@ -9,9 +9,9 @@ export const UtilityBar = () => {
             <Phone className="w-3.5 h-3.5 text-accent" aria-hidden />
             <span>(601) 439-7230</span>
           </a>
-          <a href="mailto:cwood@woodinsurance.agency" className="flex items-center gap-2 hover:text-accent transition-colors">
+          <a href="mailto:cindy@woodinsuranceagency.net" className="flex items-center gap-2 hover:text-accent transition-colors">
             <Mail className="w-3.5 h-3.5 text-accent" aria-hidden />
-            <span>cwood@woodinsurance.agency</span>
+            <span>cindy@woodinsuranceagency.net</span>
           </a>
         </div>
         <div className="flex items-center gap-2 text-white/85">
