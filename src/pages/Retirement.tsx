@@ -19,7 +19,7 @@ const INCLUDED = [
 const QUICK_FACTS = [
   { label: "Years Helping Families", value: "20+" },
   { label: "Carriers Compared", value: "Multiple" },
-  { label: "Local Office", value: "Brandon, MS" },
+  { label: "Local Office", value: "Magee, MS" },
   { label: "Service Area", value: "MS · AL · TN · LA" },
 ];
 
@@ -279,7 +279,7 @@ const Retirement = () => {
               Independent, Local, and On Your Side
             </h2>
             <p className="mt-4 text-muted-foreground text-[17px] leading-relaxed">
-              Cindy Wood has spent two decades helping families in Brandon and across the South step into retirement with confidence. Because we are independent, we are not tied to any single carrier, and we are not in a hurry to sell you something. We are in this for the long haul.
+              Cindy Wood has spent two decades helping families in Magee and across the South step into retirement with confidence. Because we are independent, we are not tied to any single carrier, and we are not in a hurry to sell you something. We are in this for the long haul.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-base btn-navy">Schedule Consultation</Link>

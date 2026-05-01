@@ -19,7 +19,7 @@ const QUICK_FACTS = [
   { label: "Eligibility Age", value: "65+" },
   { label: "Coverage Parts", value: "4" },
   { label: "$0 Premium Plans", value: "Available" },
-  { label: "Local Office", value: "Brandon, MS" },
+  { label: "Local Office", value: "Magee, MS" },
 ];
 
 const PARTS = [
@@ -586,7 +586,7 @@ const Medicare = () => {
               Independent, Local, and On Your Side
             </h2>
             <p className="mt-4 text-muted-foreground text-[17px] leading-relaxed">
-              Cindy Wood has spent two decades helping seniors in Brandon and across the South choose Medicare coverage they can actually use. Because we are independent, we are not tied to a single carrier and we never charge a fee. We are in this for the long haul.
+              Cindy Wood has spent two decades helping seniors in Magee and across the South choose Medicare coverage they can actually use. Because we are independent, we are not tied to a single carrier and we never charge a fee. We are in this for the long haul.
             </p>
             <ul className="mt-6 grid sm:grid-cols-2 gap-3">
               {SERVICE_BENEFITS.map((b) => (
