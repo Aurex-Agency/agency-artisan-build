@@ -17,7 +17,7 @@ export const Logo = ({ variant = "dark", className = "" }: LogoProps) => {
       <img
         src={logoImg}
         alt="Wood Insurance Agency — Protecting What Matters"
-        className={`h-16 sm:h-20 lg:h-24 w-auto object-contain transition-transform group-hover:scale-[1.02] ${
+        className={`h-14 sm:h-16 lg:h-[72px] w-auto object-contain transition-transform group-hover:scale-[1.02] ${
           isLight ? "brightness-0 invert" : ""
         }`}
       />
