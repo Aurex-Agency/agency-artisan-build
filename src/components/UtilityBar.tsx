@@ -5,9 +5,9 @@ export const UtilityBar = () => {
     <div className="bg-primary-dark text-white text-[13px]">
       <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-2 md:gap-6 py-2.5">
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
-          <a href="tel:6013972982" className="flex items-center gap-2 hover:text-accent transition-colors">
+          <a href="tel:6014397230" className="flex items-center gap-2 hover:text-accent transition-colors">
             <Phone className="w-3.5 h-3.5 text-accent" aria-hidden />
-            <span>(601) 397-2982</span>
+            <span>(601) 439-7230</span>
           </a>
           <a href="mailto:cwood@woodinsurance.agency" className="flex items-center gap-2 hover:text-accent transition-colors">
             <Mail className="w-3.5 h-3.5 text-accent" aria-hidden />

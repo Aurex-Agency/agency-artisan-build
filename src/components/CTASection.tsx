@@ -15,7 +15,7 @@ export const CTASection = ({
   eyebrow,
   headline,
   body,
-  primaryLabel = "Call (601) 397-2982",
+  primaryLabel = "Call (601) 439-7230",
   secondaryLabel = "Request a Consultation",
 }: CTASectionProps) => {
   const isGold = variant === "gold";
@@ -32,7 +32,7 @@ export const CTASection = ({
           {body}
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="tel:6013972982" className={`btn-base ${isGold ? "btn-navy" : "btn-gold"}`}>
+          <a href="tel:6014397230" className={`btn-base ${isGold ? "btn-navy" : "btn-gold"}`}>
             <Phone className="w-5 h-5" /> {primaryLabel}
           </a>
           <Link to="/contact" className={`btn-base ${isGold ? "btn-outline-dark" : "btn-outline-white"}`}>

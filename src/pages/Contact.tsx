@@ -26,7 +26,7 @@ const Contact = () => {
 
             <ul className="space-y-4 mt-6">
               {[
-                { icon: Phone, title: "Phone", body: "(601) 397-2982", href: "tel:6013972982" },
+                { icon: Phone, title: "Phone", body: "(601) 439-7230", href: "tel:6014397230" },
                 { icon: Mail, title: "Email", body: "cwood@woodinsurance.agency", href: "mailto:cwood@woodinsurance.agency" },
                 { icon: MapPin, title: "Office", body: "398 Simpson Hwy 149, Ste A\nMagee, MS 39111" },
                 { icon: Clock, title: "Hours", body: "Mon-Fri 9AM-5PM" },
