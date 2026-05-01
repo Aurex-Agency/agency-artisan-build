@@ -54,7 +54,7 @@ export const Footer = () => {
             </li>
             <li className="flex items-center gap-2.5">
               <Clock className="w-4 h-4 text-accent" aria-hidden />
-              <span>Mon-Fri 9AM-5PM</span>
+              <span>Mon-Fri 8AM-5PM</span>
             </li>
           </ul>
         </div>
