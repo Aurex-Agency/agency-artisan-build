@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 const Contact = () => {
   return (
     <Layout>
-      <Seo title="Contact Wood Insurance Agency" description="Get in touch with Cindy Wood. Phone, email, or visit our Magee, MS office. Serving MS, AL, TN, and LA." />
+      <Seo path="/contact" title="Contact Wood Insurance Agency" description="Get in touch with Cindy Wood. Phone, email, or visit our Magee, MS office. Serving MS, AL, TN, and LA." />
 
       <section className="bg-primary text-white">
         <div className="container-wide py-14 lg:py-16 max-w-3xl mx-auto text-center">
