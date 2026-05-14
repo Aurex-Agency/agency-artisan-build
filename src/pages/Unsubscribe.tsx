@@ -64,7 +64,7 @@ const Unsubscribe = () => {
 
   return (
     <Layout>
-      <Seo title="Unsubscribe — Wood Insurance Agency" description="Manage your email preferences." />
+      <Seo path="/unsubscribe" title="Unsubscribe — Wood Insurance Agency" description="Manage your email preferences." />
       <section className="py-20 lg:py-24 bg-white">
         <div className="container-wide max-w-xl mx-auto text-center">
           <h1 className="text-[32px] sm:text-[40px] font-bold text-ink">Unsubscribe</h1>
