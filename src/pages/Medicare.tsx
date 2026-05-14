@@ -208,8 +208,18 @@ const Medicare = () => {
   return (
     <Layout>
       <Seo
+        path="/medicare"
         title="Medicare Plans | Wood Insurance Agency"
-        description="Medicare Advantage, Medigap, and Part D plans explained. Eligibility, enrollment timeline, 2026 costs, and side-by-side plan comparisons. Local Medicare expert serving MS, AL, TN, and LA."
+        description="Medicare Advantage, Medigap, and Part D explained. Eligibility, enrollment, 2026 costs. Local expert serving MS, AL, TN, LA."
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
       />
 
       {/* Hero */}
