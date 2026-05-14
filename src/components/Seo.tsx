@@ -5,10 +5,12 @@ interface SeoProps {
   description: string;
   keywords?: string;
   path?: string;
+  jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
-export const Seo = ({ title, description, keywords, path = "/" }: SeoProps) => {
+export const Seo = ({ title, description, keywords, path = "/", jsonLd }: SeoProps) => {
   const url = typeof window !== "undefined" ? `${window.location.origin}${path}` : path;
+  const schemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
   return (
     <Helmet>
       <title>{title}</title>
@@ -22,6 +24,9 @@ export const Seo = ({ title, description, keywords, path = "/" }: SeoProps) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      {schemas.map((s, i) => (
+        <script key={i} type="application/ld+json">{JSON.stringify(s)}</script>
+      ))}
     </Helmet>
   );
 };
