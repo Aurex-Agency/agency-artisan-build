@@ -14,7 +14,7 @@ const VALUES = [
 const About = () => {
   return (
     <Layout>
-      <Seo title="About Cindy Wood | Wood Insurance Agency" description="Meet Cindy Wood, your local independent Medicare and insurance expert serving MS, AL, TN, and LA." />
+      <Seo path="/about" title="About Cindy Wood | Wood Insurance Agency" description="Meet Cindy Wood, your local independent Medicare and insurance expert serving MS, AL, TN, and LA." />
 
       <section className="bg-primary text-white">
         <div className="container-wide py-16 lg:py-20 max-w-3xl mx-auto text-center">
