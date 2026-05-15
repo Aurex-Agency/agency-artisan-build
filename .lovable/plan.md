@@ -1,38 +1,31 @@
 ## Goal
 
-Replace the current royal-blue / leaf-green / yellow-gold theme with a palette pulled directly from the new logo: rich purple (leaves) and warm realistic gold (wordmark, ring, monogram).
+Replace the flat yellow-leaning accent with a shinier, more "metallic gold" treatment that pops against the purple — closer to the realistic gold in the logo wordmark.
 
-## New palette
+## Approach
 
-- **Primary (Purple)** — `hsl(280 45% 38%)` — deep logo purple, used on headers, primary buttons, links, navy-toned surfaces
-- **Primary Dark** — `hsl(280 50% 26%)` — hover/footer/utility bar
-- **Accent (Gold)** — `hsl(40 65% 52%)` — realistic warm gold for CTAs, eyebrows, accents
-- **Accent Dark** — `hsl(36 60% 40%)` — gold hover, deeper gradient stop
-- **Secondary** — `hsl(285 30% 55%)` — softer purple, replaces the leaf-green secondary used on a few service cards
-- **Card-blue** — `hsl(280 35% 60%)` — replace the light-blue Life card top with a lighter purple so all service cards stay on-brand
-- Ink, surface, muted, borders unchanged (neutral grays still read well against purple/gold)
+Flat HSL can't be metallic, so I'll do two things:
 
-Realistic gold is single-tone here; the metallic gradient from the logo only lives inside the image itself.
+1. **Shift the base gold** to a richer, more saturated warm gold (less yellow, more amber):
+   - `--accent: 38 78% 52%` (was `40 65% 52%`)
+   - `--accent-dark: 32 75% 40%` (deeper hover/edge)
+   - Add a new `--accent-glow: 46 95% 65%` (highlight stop for gradients)
 
-## Scope of changes
+2. **Add a metallic gradient token** used by gold CTAs and gold accent surfaces:
+   - `--gradient-gold: linear-gradient(135deg, hsl(46 95% 65%) 0%, hsl(40 85% 55%) 45%, hsl(32 75% 40%) 100%)`
+   - Apply via the existing `.btn-gold` utility in `src/index.css` (background becomes the gradient, with a subtle inner highlight via `box-shadow: inset 0 1px 0 hsl(48 100% 80% / 0.6)` for the "shine" line)
+   - Strengthen `--shadow-cta` so the gold buttons glow more
 
-Only design tokens — no component logic, no copy, no layout changes.
+3. **Keep eyebrow / icon / small text gold** as the solid `--accent` (gradients on tiny text look muddy).
 
-1. **`src/index.css`** — update `:root` (and `.dark` mirror) for `--primary`, `--primary-dark`, `--secondary`, `--accent`, `--accent-foreground`, `--accent-dark`, `--card-blue`, `--ring`, and `--shadow-cta` (re-tint the gold glow).
-2. **`tailwind.config.ts`** — no edits needed; tokens are already wired through CSS variables.
-3. **Spot audit** for any hardcoded hex/Tailwind color classes that bypass tokens, in:
-   - `src/components/Header.tsx`, `Footer.tsx`, `UtilityBar.tsx`, `MobileCallBar.tsx`
-   - `src/components/HeroQuoteForm.tsx`, `QuoteForm.tsx`, `ServiceCard.tsx`, `CTASection.tsx`, `TestimonialSlider.tsx`, `StatRow.tsx`
-   - All pages under `src/pages/`
-   - Replace any literal `bg-blue-*`, `text-green-*`, `#hex` with the matching semantic token.
-4. **`index.html`** — update `<meta name="theme-color">` if present to the new purple.
+## Files
+
+- `src/index.css` only — token values + `.btn-gold` rule + shadow.
 
 ## Out of scope
 
-- The logo image itself (already updated)
-- Email templates under `supabase/functions/_shared/transactional-email-templates/` (kept on neutral brand for deliverability unless you ask)
-- Copy, layout, animations
+Layout, copy, purple palette, components themselves.
 
 ## Verification
 
-After the swap, screenshot the home, Medicare, and Contact pages and confirm: header/nav purple, gold CTA buttons, service cards on-brand, footer purple-dark, no stray blue/green remaining.
+Screenshot the home hero, the gold CTA section, and a service card; confirm the gold reads as polished metallic gold (highlight at top-left, deeper amber at bottom-right) and noticeably pops off the purple.
