@@ -47,7 +47,7 @@ export const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link to="/contact" className="hidden sm:inline-flex btn-base btn-navy !min-h-[44px] !text-[14px] !px-5">
+          <Link to="/contact" className="hidden sm:inline-flex btn-base btn-gold !min-h-[44px] !text-[14px] !px-5">
             Get Quote
           </Link>
           <button
