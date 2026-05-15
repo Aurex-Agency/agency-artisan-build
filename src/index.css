@@ -9,19 +9,19 @@
 
 @layer base {
   :root {
-    /* Brand palette */
-    --primary: 222 78% 42%;          /* Royal Blue from logo */
+    /* Brand palette — Wood Insurance logo (purple + warm gold) */
+    --primary: 280 45% 38%;          /* Logo leaf purple */
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 222 80% 28%;     /* Deeper royal blue */
+    --primary-dark: 280 50% 26%;     /* Deeper purple */
 
-    --secondary: 110 62% 42%;        /* Leaf Green from logo */
+    --secondary: 285 30% 55%;        /* Soft purple */
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 42 92% 52%;            /* Golden Yellow from logo */
-    --accent-foreground: 222 80% 22%;
-    --accent-dark: 38 90% 44%;
+    --accent: 40 65% 52%;            /* Warm realistic gold */
+    --accent-foreground: 280 50% 18%;
+    --accent-dark: 36 60% 40%;
 
-    --card-blue: 210 80% 56%;        /* Light blue for Life card top */
+    --card-blue: 280 35% 60%;        /* Light purple for service card variety */
 
     --background: 0 0% 100%;
     --surface: 210 33% 97%;          /* #F8FAFC soft section bg */
@@ -45,14 +45,14 @@
 
     --border: 215 20% 90%;
     --input: 215 20% 90%;
-    --ring: 222 69% 33%;
+    --ring: 280 45% 38%;
 
     --radius: 1rem;
 
     --shadow-soft: 0 1px 3px 0 hsl(222 47% 11% / 0.05), 0 1px 2px -1px hsl(222 47% 11% / 0.04);
     --shadow-card: 0 4px 6px -1px hsl(222 47% 11% / 0.07), 0 2px 4px -2px hsl(222 47% 11% / 0.05);
     --shadow-float: 0 10px 30px -10px hsl(222 47% 11% / 0.18), 0 4px 12px -4px hsl(222 47% 11% / 0.08);
-    --shadow-cta: 0 8px 20px -8px hsl(43 80% 46% / 0.55);
+    --shadow-cta: 0 8px 20px -8px hsl(40 65% 45% / 0.55);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -71,19 +71,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 222 47% 9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 222 70% 60%;
+    --primary: 280 55% 65%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 123 46% 44%;
+    --secondary: 285 35% 55%;
     --secondary-foreground: 0 0% 100%;
     --muted: 222 47% 14%;
     --muted-foreground: 215 16% 70%;
-    --accent: 43 80% 55%;
-    --accent-foreground: 222 70% 14%;
+    --accent: 40 65% 58%;
+    --accent-foreground: 280 50% 14%;
     --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 100%;
     --border: 222 47% 18%;
     --input: 222 47% 18%;
-    --ring: 222 70% 60%;
+    --ring: 280 55% 65%;
   }
 }
 
