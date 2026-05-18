@@ -1,10 +1,13 @@
-## Footer logo fix
+## Purple header with white nav text
 
-1. Copy `user-uploads://Wood_Insurance_Updated_Logo_No_Back.png` → `src/assets/wood-insurance-logo-light.png` (transparent-bg version suited for dark footer).
-2. Update `src/components/Logo.tsx`:
-   - Import the new light logo.
-   - When `variant="light"`, render the new transparent logo directly (no `brightness-0 invert` filter).
-   - `variant="dark"` (header) continues using the existing logo.
-3. Leave `src/components/Footer.tsx` as-is (still calls `<Logo variant="light" />`).
+Update `src/components/Header.tsx`:
+- Header bar background: `bg-white` → `bg-primary-dark` (deep navy-purple matching footer/hero); update border to `border-white/10`.
+- Desktop nav links: active = `text-accent` (gold), inactive = `text-white/85 hover:text-accent`.
+- Mobile menu toggle button: `text-primary` → `text-white`, hover `hover:bg-white/10`.
+- Mobile dropdown panel: `bg-white` → `bg-primary-dark`, links from `text-ink`/`text-primary` → `text-white`/`text-accent`, dividers `border-white/10`.
+- Keep gold "Get Quote" button as-is (already pops on dark).
+- Logo unchanged — uses the transparent light logo via header's default `<Logo />`… 
 
-No other files or styles change.
+One thing to check: header currently uses `<Logo />` (default dark variant — colored logo on white). On a purple background, switch to `<Logo variant="light" />` so the same transparent gold/purple logo (which already reads well on dark, as in the footer) is used.
+
+No changes to `UtilityBar`, footer, or other components.
