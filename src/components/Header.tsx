@@ -24,10 +24,10 @@ export const Header = () => {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-border shadow-soft">
+    <header className="sticky top-0 z-50 bg-primary-dark border-b border-white/10 shadow-soft">
       <UtilityBar />
       <div className="container-wide flex items-center justify-between h-[78px]">
-        <Logo />
+        <Logo variant="light" />
 
         <nav className="hidden xl:flex items-center gap-7" aria-label="Main">
           {NAV.map((item) => (
@@ -37,7 +37,7 @@ export const Header = () => {
               end={item.to === "/"}
               className={({ isActive }) =>
                 `text-[15px] font-medium transition-colors ${
-                  isActive ? "text-primary" : "text-ink/75 hover:text-primary"
+                  isActive ? "text-accent" : "text-white/85 hover:text-accent"
                 }`
               }
             >
@@ -52,7 +52,7 @@ export const Header = () => {
           </Link>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-md text-primary hover:bg-muted transition-colors"
+            className="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-md text-white hover:bg-white/10 transition-colors"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
@@ -62,7 +62,7 @@ export const Header = () => {
       </div>
 
       {open && (
-        <div className="xl:hidden absolute left-0 right-0 top-full bg-white border-b border-border shadow-float max-h-[calc(100vh-120px)] overflow-y-auto">
+        <div className="xl:hidden absolute left-0 right-0 top-full bg-primary-dark border-b border-white/10 shadow-float max-h-[calc(100vh-120px)] overflow-y-auto">
           <nav className="container-wide py-4 flex flex-col" aria-label="Mobile">
             {NAV.map((item) => (
               <NavLink
@@ -70,8 +70,8 @@ export const Header = () => {
                 to={item.to}
                 end={item.to === "/"}
                 className={({ isActive }) =>
-                  `min-h-[52px] flex items-center text-[16px] font-medium border-b border-border last:border-b-0 ${
-                    isActive ? "text-primary" : "text-ink"
+                  `min-h-[52px] flex items-center text-[16px] font-medium border-b border-white/10 last:border-b-0 ${
+                    isActive ? "text-accent" : "text-white"
                   }`
                 }
               >
