@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logoImg from "@/assets/wood-insurance-logo.png";
+import logoLightImg from "@/assets/wood-insurance-logo-light.png";
 
 interface LogoProps {
   variant?: "dark" | "light";
@@ -15,11 +16,9 @@ export const Logo = ({ variant = "dark", className = "" }: LogoProps) => {
       aria-label="Wood Insurance Agency home"
     >
       <img
-        src={logoImg}
+        src={isLight ? logoLightImg : logoImg}
         alt="Wood Insurance Agency — Protecting What Matters"
-        className={`h-14 sm:h-16 lg:h-[72px] w-auto object-contain transition-transform group-hover:scale-[1.02] ${
-          isLight ? "brightness-0 invert" : ""
-        }`}
+        className="h-14 sm:h-16 lg:h-[72px] w-auto object-contain transition-transform group-hover:scale-[1.02]"
       />
     </Link>
   );
