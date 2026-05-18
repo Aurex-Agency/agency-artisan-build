@@ -29,7 +29,7 @@ export const Header = () => {
       <div className="container-wide flex items-center justify-between h-[78px]">
         <Logo />
 
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Main">
+        <nav className="hidden xl:flex items-center gap-7" aria-label="Main">
           {NAV.map((item) => (
             <NavLink
               key={item.to}
@@ -52,7 +52,7 @@ export const Header = () => {
           </Link>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-md text-primary hover:bg-muted transition-colors"
+            className="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-md text-primary hover:bg-muted transition-colors"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
@@ -62,7 +62,7 @@ export const Header = () => {
       </div>
 
       {open && (
-        <div className="lg:hidden absolute left-0 right-0 top-full bg-white border-b border-border shadow-float max-h-[calc(100vh-120px)] overflow-y-auto">
+        <div className="xl:hidden absolute left-0 right-0 top-full bg-white border-b border-border shadow-float max-h-[calc(100vh-120px)] overflow-y-auto">
           <nav className="container-wide py-4 flex flex-col" aria-label="Mobile">
             {NAV.map((item) => (
               <NavLink
