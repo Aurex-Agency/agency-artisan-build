@@ -5,6 +5,7 @@ import { HeroQuoteForm } from "@/components/HeroQuoteForm";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
 import { StatRow } from "@/components/StatRow";
+import heroTree from "@/assets/hero-tree.png";
 import {
   Heart, PiggyBank, Stethoscope, Shield,
   Users, BadgeCheck, HandshakeIcon, MapPin,
@@ -63,8 +64,16 @@ const Index = () => {
 
       {/* Hero */}
       <section className="relative bg-primary text-white overflow-hidden">
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary-dark" />
-        <div className="container-wide relative py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div aria-hidden className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
+        <img
+          src={heroTree}
+          alt=""
+          aria-hidden
+          width={1024}
+          height={1024}
+          className="pointer-events-none select-none absolute right-0 top-1/2 -translate-y-1/2 h-[110%] w-auto max-w-none object-contain opacity-20 lg:opacity-90 lg:right-[-4%]"
+        />
+        <div className="container-wide relative z-10 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-up">
             <h1 className="text-white text-[40px] sm:text-[52px] lg:text-[60px] leading-[1.05] font-bold tracking-tight">
               Wood Insurance Agency
