@@ -51,7 +51,7 @@ export const HeroQuoteForm = () => {
     <div className="bg-white rounded-2xl shadow-float p-6 sm:p-8 w-full max-w-md mx-auto">
       <h3 className="text-[24px] font-bold text-ink text-center">Get Your Free Quote</h3>
       <p className="text-center text-muted-foreground text-[14px] mt-1 mb-5">No obligation, just expert advice</p>
-      <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+      <form onSubmit={handleSubmit} className="space-y-3">
         <div className="grid grid-cols-2 gap-3">
           <input name="firstName" required placeholder="First Name" className="field" autoComplete="given-name" />
           <input name="lastName" required placeholder="Last Name" className="field" autoComplete="family-name" />
