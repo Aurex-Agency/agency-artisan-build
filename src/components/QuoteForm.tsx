@@ -65,7 +65,7 @@ export const QuoteForm = ({ defaultService = "Medicare", submitLabel = "Get My F
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+    <form onSubmit={handleSubmit} className="space-y-3">
       <div className="grid sm:grid-cols-2 gap-3">
         <input name="firstName" required placeholder="First Name" className="field" autoComplete="given-name" />
         <input name="lastName" required placeholder="Last Name" className="field" autoComplete="family-name" />
