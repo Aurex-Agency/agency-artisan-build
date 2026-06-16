@@ -176,7 +176,7 @@ const Index = () => {
         <div className="container-wide mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: Phone, title: "Call Us", body: "(601) 439-7230", href: "tel:6014397230" },
-            { icon: Mail, title: "Email Us", body: "quotes@woodinsuranceagency.net", href: "mailto:quotes@woodinsuranceagency.net" },
+            { icon: Mail, title: "Email Us", body: "info@woodinsuranceagency.net", href: "mailto:info@woodinsuranceagency.net" },
             { icon: MapPin, title: "Visit Our Office", body: "398 Simpson Hwy 149, Magee, MS", href: "https://maps.google.com/?q=398+Simpson+Hwy+149+Magee+MS" },
             { icon: Clock, title: "Office Hours", body: "Mon-Fri 8AM-5PM" },
           ].map((c) => {
