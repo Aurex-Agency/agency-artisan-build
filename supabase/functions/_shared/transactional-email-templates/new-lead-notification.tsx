@@ -13,7 +13,7 @@ import {
 import type { TemplateEntry } from './registry.ts'
 
 const SITE_NAME = 'Wood Insurance Agency'
-const OWNER_EMAIL = 'quotes@woodinsuranceagency.net'
+const OWNER_EMAIL = 'info@woodinsuranceagency.net'
 
 interface NewLeadProps {
   firstName?: string
