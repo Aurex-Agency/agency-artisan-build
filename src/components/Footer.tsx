@@ -38,7 +38,7 @@ export const Footer = () => {
           <ul className="space-y-3 text-white/75 text-[14px]">
             <li className="flex items-start gap-2.5">
               <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" aria-hidden />
-              <span>398 Simpson Hwy 149, Ste A<br />Magee, MS 39111</span>
+              <span>106 Maine Ave N<br />Magee, MS 39111</span>
             </li>
             <li>
               <a href="tel:6014397230" className="flex items-center gap-2.5 hover:text-accent transition-colors">

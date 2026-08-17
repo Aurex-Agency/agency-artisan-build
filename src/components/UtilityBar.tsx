@@ -16,7 +16,7 @@ export const UtilityBar = () => {
         </div>
         <div className="flex items-center gap-2 text-primary">
           <MapPin className="w-3.5 h-3.5 text-primary" aria-hidden />
-          <span>398 Simpson Hwy 149, Ste A, Magee, MS 39111</span>
+          <span>106 Maine Ave N, Magee, MS 39111</span>
         </div>
       </div>
     </div>
